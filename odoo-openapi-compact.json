@@ -11,7 +11,7 @@
   "servers": [
     {
       "url": "https://your-odoo-instance.com",
-      "description": "Odoo Instance"
+      "description": "Odoo Instance (replace with your instance URL)"
     }
   ],
   "tags": [
