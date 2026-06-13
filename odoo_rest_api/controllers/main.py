@@ -94,8 +94,7 @@ def with_auth(func):
         uid, password = authenticate()
         if not uid:
             return error_response('Unauthorized', 401)
-        request.uid = uid
-        request.auth_password = password
+        request.update_env(user=uid)
         return func(*args, **kwargs)
     return wrapper
 
