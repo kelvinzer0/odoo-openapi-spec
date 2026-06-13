@@ -2,7 +2,7 @@
   "openapi": "3.1.0",
   "info": {
     "title": "Odoo \u2014 Business API (Compact)",
-    "description": "Compact OpenAPI spec for key business models only.\nOdoo 17.0\n\nModels included: product, partner, sale, purchase, account, stock, CRM, POS, HR, MRP, project, UoM",
+    "description": "Compact OpenAPI spec for key business models only.\nOdoo 17.0\n\nModels included: product, partner, sale, purchase, account, stock, CRM, POS, HR, MRP, project, UoM\n\n## Authentication\n\n**Bearer Token (Recommended):** Generate from Odoo backend \u2192 REST API \u2192 API Console.\n```\nAuthorization: Bearer <token>\n```\n\n**Basic Auth:** Use Odoo email + password.\n```\nAuthorization: Basic base64(email:password)\n```",
     "version": "17.0-20260609",
     "contact": {
       "name": "Odoo Instance"
@@ -58314,22 +58314,22 @@
       }
     },
     "securitySchemes": {
-      "odoo_auth": {
-        "type": "apiKey",
-        "in": "header",
-        "name": "Authorization",
-        "description": "Odoo UID:password or API key. First authenticate via XML-RPC to get UID."
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "API Token",
+        "description": "Generate token from /api/credentials page in Odoo backend."
       },
-      "odoo_xmlrpc": {
+      "basicAuth": {
         "type": "http",
         "scheme": "basic",
-        "description": "Use Odoo XML-RPC authenticate() to get UID, then use UID:password for calls."
+        "description": "HTTP Basic Auth using Odoo email and password."
       }
     }
   },
   "security": [
     {
-      "odoo_xmlrpc": []
+      "bearerAuth": []
     }
   ]
 }
