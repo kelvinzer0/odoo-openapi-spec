@@ -1,6 +1,7 @@
 import json
 import functools
 import base64
+import secrets
 
 from odoo import http
 from odoo.http import request, Response
@@ -55,6 +56,8 @@ MODEL_KEYS = {
     'uom.uom':                 ['name'],
 }
 
+TOKEN_PREFIX = 'odoo-rest-api:'
+
 
 def json_response(data, status=200):
     return Response(
@@ -68,13 +71,42 @@ def error_response(message, status=400):
     return json_response({'error': message}, status=status)
 
 
+def _get_token_key(user_id):
+    return f'{TOKEN_PREFIX}{user_id}'
+
+
 def authenticate():
     auth = request.httprequest.headers.get('Authorization', '')
-    if not auth.startswith('Basic '):
-        return None, None
 
+    if auth.startswith('Bearer '):
+        token = auth[7:]
+        return _authenticate_bearer(token)
+
+    if auth.startswith('Basic '):
+        return _authenticate_basic(auth[6:])
+
+    return None, None
+
+
+def _authenticate_bearer(token):
+    ICP = request.env['ir.config_parameter'].sudo()
+    IParam = request.env['ir.config_parameter'].with_context(active_test=False).sudo()
+
+    keys = IParam.search([('key', '=like', f'{TOKEN_PREFIX}%')])
+    for key_rec in keys:
+        stored_token = key_rec.value
+        if secrets.compare_digest(stored_token, token):
+            user_id = int(key_rec.key.split(':')[-1])
+            user = request.env['res.users'].sudo().browse(user_id)
+            if user.exists() and user.active:
+                return user.id, None
+
+    return None, None
+
+
+def _authenticate_basic(encoded):
     try:
-        decoded = base64.b64decode(auth[6:]).decode()
+        decoded = base64.b64decode(encoded).decode()
         email, password = decoded.split(':', 1)
     except Exception:
         return None, None
@@ -101,12 +133,48 @@ def with_auth(func):
 
 class RestApiController(http.Controller):
 
+    # ═══════════════════════════════════════════
+    # Credentials UI
+    # ═══════════════════════════════════════════
     @http.route('/api/credentials', type='http', auth='user')
     def credentials_page(self, **kwargs):
         user = request.env.user
+        name = user.name or ''
+        initials = ''.join(w[0].upper() for w in name.split()[:2]) if name else '?'
         return request.render('odoo_rest_api.credentials_page', {
             'user_email': user.email or '',
+            'user_name': name,
+            'user_initial': initials,
         })
+
+    @http.route('/api/credentials/check', type='json', auth='user', methods=['GET'], csrf=False)
+    def check_token(self, **kwargs):
+        user_id = request.env.user.id
+        ICP = request.env['ir.config_parameter'].sudo()
+        key = _get_token_key(user_id)
+        token = ICP.get_param(key)
+        if token:
+            return {'has_token': True, 'token_preview': token[:8] + '...' + token[-4:]}
+        return {'has_token': False}
+
+    @http.route('/api/credentials/generate', type='json', auth='user', methods=['POST'], csrf=False)
+    def generate_token(self, **kwargs):
+        user_id = request.env.user.id
+        ICP = request.env['ir.config_parameter'].sudo()
+        key = _get_token_key(user_id)
+
+        token = secrets.token_urlsafe(32)
+        ICP.set_param(key, token)
+
+        return {'token': f'Bearer {token}'}
+
+    @http.route('/api/credentials/revoke', type='json', auth='user', methods=['POST'], csrf=False)
+    def revoke_token(self, **kwargs):
+        user_id = request.env.user.id
+        ICP = request.env['ir.config_parameter'].sudo()
+        key = _get_token_key(user_id)
+        ICP.set_param(key, '')
+        return {'revoked': True}
 
     # ═══════════════════════════════════════════
     # GET /api/{model} — search_read
