@@ -470,7 +470,7 @@ tag_objects = [{"name": t, "description": f"Operations on {t}.* models"} for t i
 spec = {
     "openapi": "3.1.0",
     "info": {
-        "title": "Odoo Warung Lakku — Full API",
+        "title": "Odoo — Full API",
         "description": (
             "Auto-generated OpenAPI specification from Odoo instance.\n\n"
             f"**Odoo Version:** {version['server_version']}\n"
@@ -496,7 +496,7 @@ spec = {
         ),
         "version": version['server_version'],
         "contact": {
-            "name": "Warung Lakku",
+            "name": "Odoo Instance",
             "url": URL,
         },
     },

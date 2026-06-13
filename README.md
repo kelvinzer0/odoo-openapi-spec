@@ -1,4 +1,4 @@
-# Odoo OpenAPI Spec — Warung Lakku
+# Odoo OpenAPI Spec
 
 Auto-generated OpenAPI 3.1.0 specification from Odoo 17.0 instance.
 
@@ -36,6 +36,5 @@ Edit the config in the script (URL, DB, USER, PASS) to point to your Odoo instan
 ## Odoo Version
 
 ```
-Server: 17.0-20260609
-Database: warunglakku-odoo
+Server: 17.0
 ```
