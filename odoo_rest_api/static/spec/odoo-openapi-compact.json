@@ -101,7 +101,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -274,72 +274,6 @@
         "x-odoo-model": "account.account"
       }
     },
-    "/api/account.account/{id}/call": {
-      "post": {
-        "summary": "Call method on Account",
-        "description": "Call any method on a account.account record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_account_account",
-        "tags": [
-          "account"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "account.account"
-      }
-    },
     "/api/account.journal": {
       "get": {
         "summary": "Search & read Journal",
@@ -372,7 +306,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -545,72 +479,6 @@
         "x-odoo-model": "account.journal"
       }
     },
-    "/api/account.journal/{id}/call": {
-      "post": {
-        "summary": "Call method on Journal",
-        "description": "Call any method on a account.journal record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_account_journal",
-        "tags": [
-          "account"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "account.journal"
-      }
-    },
     "/api/account.move": {
       "get": {
         "summary": "Search & read Journal Entry",
@@ -643,7 +511,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -816,72 +684,6 @@
         "x-odoo-model": "account.move"
       }
     },
-    "/api/account.move/{id}/call": {
-      "post": {
-        "summary": "Call method on Journal Entry",
-        "description": "Call any method on a account.move record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_account_move",
-        "tags": [
-          "account"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "account.move"
-      }
-    },
     "/api/account.move.line": {
       "get": {
         "summary": "Search & read Journal Item",
@@ -914,7 +716,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -1087,72 +889,6 @@
         "x-odoo-model": "account.move.line"
       }
     },
-    "/api/account.move.line/{id}/call": {
-      "post": {
-        "summary": "Call method on Journal Item",
-        "description": "Call any method on a account.move.line record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_account_move_line",
-        "tags": [
-          "account"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "account.move.line"
-      }
-    },
     "/api/account.payment": {
       "get": {
         "summary": "Search & read Payments",
@@ -1185,7 +921,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -1358,72 +1094,6 @@
         "x-odoo-model": "account.payment"
       }
     },
-    "/api/account.payment/{id}/call": {
-      "post": {
-        "summary": "Call method on Payments",
-        "description": "Call any method on a account.payment record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_account_payment",
-        "tags": [
-          "account"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "account.payment"
-      }
-    },
     "/api/account.tax": {
       "get": {
         "summary": "Search & read Tax",
@@ -1456,7 +1126,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -1629,72 +1299,6 @@
         "x-odoo-model": "account.tax"
       }
     },
-    "/api/account.tax/{id}/call": {
-      "post": {
-        "summary": "Call method on Tax",
-        "description": "Call any method on a account.tax record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_account_tax",
-        "tags": [
-          "account"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "account.tax"
-      }
-    },
     "/api/account.tax.group": {
       "get": {
         "summary": "Search & read Tax Group",
@@ -1727,7 +1331,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -1900,72 +1504,6 @@
         "x-odoo-model": "account.tax.group"
       }
     },
-    "/api/account.tax.group/{id}/call": {
-      "post": {
-        "summary": "Call method on Tax Group",
-        "description": "Call any method on a account.tax.group record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_account_tax_group",
-        "tags": [
-          "account"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "account.tax.group"
-      }
-    },
     "/api/crm.lead": {
       "get": {
         "summary": "Search & read Lead/Opportunity",
@@ -1998,7 +1536,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -2171,72 +1709,6 @@
         "x-odoo-model": "crm.lead"
       }
     },
-    "/api/crm.lead/{id}/call": {
-      "post": {
-        "summary": "Call method on Lead/Opportunity",
-        "description": "Call any method on a crm.lead record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_crm_lead",
-        "tags": [
-          "crm"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "crm.lead"
-      }
-    },
     "/api/crm.stage": {
       "get": {
         "summary": "Search & read CRM Stages",
@@ -2269,7 +1741,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -2442,72 +1914,6 @@
         "x-odoo-model": "crm.stage"
       }
     },
-    "/api/crm.stage/{id}/call": {
-      "post": {
-        "summary": "Call method on CRM Stages",
-        "description": "Call any method on a crm.stage record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_crm_stage",
-        "tags": [
-          "crm"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "crm.stage"
-      }
-    },
     "/api/crm.tag": {
       "get": {
         "summary": "Search & read CRM Tag",
@@ -2540,7 +1946,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -2713,72 +2119,6 @@
         "x-odoo-model": "crm.tag"
       }
     },
-    "/api/crm.tag/{id}/call": {
-      "post": {
-        "summary": "Call method on CRM Tag",
-        "description": "Call any method on a crm.tag record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_crm_tag",
-        "tags": [
-          "crm"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "crm.tag"
-      }
-    },
     "/api/hr.department": {
       "get": {
         "summary": "Search & read Department",
@@ -2811,7 +2151,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -2984,72 +2324,6 @@
         "x-odoo-model": "hr.department"
       }
     },
-    "/api/hr.department/{id}/call": {
-      "post": {
-        "summary": "Call method on Department",
-        "description": "Call any method on a hr.department record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_hr_department",
-        "tags": [
-          "hr"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "hr.department"
-      }
-    },
     "/api/hr.employee": {
       "get": {
         "summary": "Search & read Employee",
@@ -3082,7 +2356,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -3255,72 +2529,6 @@
         "x-odoo-model": "hr.employee"
       }
     },
-    "/api/hr.employee/{id}/call": {
-      "post": {
-        "summary": "Call method on Employee",
-        "description": "Call any method on a hr.employee record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_hr_employee",
-        "tags": [
-          "hr"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "hr.employee"
-      }
-    },
     "/api/hr.job": {
       "get": {
         "summary": "Search & read Job Position",
@@ -3353,7 +2561,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -3526,72 +2734,6 @@
         "x-odoo-model": "hr.job"
       }
     },
-    "/api/hr.job/{id}/call": {
-      "post": {
-        "summary": "Call method on Job Position",
-        "description": "Call any method on a hr.job record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_hr_job",
-        "tags": [
-          "hr"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "hr.job"
-      }
-    },
     "/api/mail.message": {
       "get": {
         "summary": "Search & read Message",
@@ -3624,7 +2766,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -3797,72 +2939,6 @@
         "x-odoo-model": "mail.message"
       }
     },
-    "/api/mail.message/{id}/call": {
-      "post": {
-        "summary": "Call method on Message",
-        "description": "Call any method on a mail.message record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_mail_message",
-        "tags": [
-          "mail"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "mail.message"
-      }
-    },
     "/api/mail.thread": {
       "get": {
         "summary": "Search & read Email Thread",
@@ -3895,7 +2971,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -4068,72 +3144,6 @@
         "x-odoo-model": "mail.thread"
       }
     },
-    "/api/mail.thread/{id}/call": {
-      "post": {
-        "summary": "Call method on Email Thread",
-        "description": "Call any method on a mail.thread record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_mail_thread",
-        "tags": [
-          "mail"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "mail.thread"
-      }
-    },
     "/api/mrp.bom": {
       "get": {
         "summary": "Search & read Bill of Material",
@@ -4166,7 +3176,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -4339,72 +3349,6 @@
         "x-odoo-model": "mrp.bom"
       }
     },
-    "/api/mrp.bom/{id}/call": {
-      "post": {
-        "summary": "Call method on Bill of Material",
-        "description": "Call any method on a mrp.bom record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_mrp_bom",
-        "tags": [
-          "mrp"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "mrp.bom"
-      }
-    },
     "/api/mrp.production": {
       "get": {
         "summary": "Search & read Production Order",
@@ -4437,7 +3381,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -4610,72 +3554,6 @@
         "x-odoo-model": "mrp.production"
       }
     },
-    "/api/mrp.production/{id}/call": {
-      "post": {
-        "summary": "Call method on Production Order",
-        "description": "Call any method on a mrp.production record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_mrp_production",
-        "tags": [
-          "mrp"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "mrp.production"
-      }
-    },
     "/api/mrp.workorder": {
       "get": {
         "summary": "Search & read Work Order",
@@ -4708,7 +3586,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -4881,72 +3759,6 @@
         "x-odoo-model": "mrp.workorder"
       }
     },
-    "/api/mrp.workorder/{id}/call": {
-      "post": {
-        "summary": "Call method on Work Order",
-        "description": "Call any method on a mrp.workorder record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_mrp_workorder",
-        "tags": [
-          "mrp"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "mrp.workorder"
-      }
-    },
     "/api/pos.config": {
       "get": {
         "summary": "Search & read Point of Sale Configuration",
@@ -4979,7 +3791,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -5152,72 +3964,6 @@
         "x-odoo-model": "pos.config"
       }
     },
-    "/api/pos.config/{id}/call": {
-      "post": {
-        "summary": "Call method on Point of Sale Configuration",
-        "description": "Call any method on a pos.config record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_pos_config",
-        "tags": [
-          "pos"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "pos.config"
-      }
-    },
     "/api/pos.order": {
       "get": {
         "summary": "Search & read Point of Sale Orders",
@@ -5250,7 +3996,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -5423,72 +4169,6 @@
         "x-odoo-model": "pos.order"
       }
     },
-    "/api/pos.order/{id}/call": {
-      "post": {
-        "summary": "Call method on Point of Sale Orders",
-        "description": "Call any method on a pos.order record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_pos_order",
-        "tags": [
-          "pos"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "pos.order"
-      }
-    },
     "/api/pos.order.line": {
       "get": {
         "summary": "Search & read Point of Sale Order Lines",
@@ -5521,7 +4201,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -5694,72 +4374,6 @@
         "x-odoo-model": "pos.order.line"
       }
     },
-    "/api/pos.order.line/{id}/call": {
-      "post": {
-        "summary": "Call method on Point of Sale Order Lines",
-        "description": "Call any method on a pos.order.line record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_pos_order_line",
-        "tags": [
-          "pos"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "pos.order.line"
-      }
-    },
     "/api/pos.session": {
       "get": {
         "summary": "Search & read Point of Sale Session",
@@ -5792,7 +4406,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -5965,72 +4579,6 @@
         "x-odoo-model": "pos.session"
       }
     },
-    "/api/pos.session/{id}/call": {
-      "post": {
-        "summary": "Call method on Point of Sale Session",
-        "description": "Call any method on a pos.session record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_pos_session",
-        "tags": [
-          "pos"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "pos.session"
-      }
-    },
     "/api/product.attribute": {
       "get": {
         "summary": "Search & read Product Attribute",
@@ -6063,7 +4611,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -6236,72 +4784,6 @@
         "x-odoo-model": "product.attribute"
       }
     },
-    "/api/product.attribute/{id}/call": {
-      "post": {
-        "summary": "Call method on Product Attribute",
-        "description": "Call any method on a product.attribute record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_product_attribute",
-        "tags": [
-          "product"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "product.attribute"
-      }
-    },
     "/api/product.attribute.value": {
       "get": {
         "summary": "Search & read Attribute Value",
@@ -6334,7 +4816,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -6507,72 +4989,6 @@
         "x-odoo-model": "product.attribute.value"
       }
     },
-    "/api/product.attribute.value/{id}/call": {
-      "post": {
-        "summary": "Call method on Attribute Value",
-        "description": "Call any method on a product.attribute.value record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_product_attribute_value",
-        "tags": [
-          "product"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "product.attribute.value"
-      }
-    },
     "/api/product.category": {
       "get": {
         "summary": "Search & read Product Category",
@@ -6605,7 +5021,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -6778,72 +5194,6 @@
         "x-odoo-model": "product.category"
       }
     },
-    "/api/product.category/{id}/call": {
-      "post": {
-        "summary": "Call method on Product Category",
-        "description": "Call any method on a product.category record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_product_category",
-        "tags": [
-          "product"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "product.category"
-      }
-    },
     "/api/product.product": {
       "get": {
         "summary": "Search & read Product Variant",
@@ -6876,7 +5226,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -7049,72 +5399,6 @@
         "x-odoo-model": "product.product"
       }
     },
-    "/api/product.product/{id}/call": {
-      "post": {
-        "summary": "Call method on Product Variant",
-        "description": "Call any method on a product.product record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_product_product",
-        "tags": [
-          "product"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "product.product"
-      }
-    },
     "/api/product.template": {
       "get": {
         "summary": "Search & read Product",
@@ -7147,7 +5431,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -7320,72 +5604,6 @@
         "x-odoo-model": "product.template"
       }
     },
-    "/api/product.template/{id}/call": {
-      "post": {
-        "summary": "Call method on Product",
-        "description": "Call any method on a product.template record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_product_template",
-        "tags": [
-          "product"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "product.template"
-      }
-    },
     "/api/project.project": {
       "get": {
         "summary": "Search & read Project",
@@ -7418,7 +5636,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -7591,72 +5809,6 @@
         "x-odoo-model": "project.project"
       }
     },
-    "/api/project.project/{id}/call": {
-      "post": {
-        "summary": "Call method on Project",
-        "description": "Call any method on a project.project record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_project_project",
-        "tags": [
-          "project"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "project.project"
-      }
-    },
     "/api/project.task": {
       "get": {
         "summary": "Search & read Task",
@@ -7689,7 +5841,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -7862,72 +6014,6 @@
         "x-odoo-model": "project.task"
       }
     },
-    "/api/project.task/{id}/call": {
-      "post": {
-        "summary": "Call method on Task",
-        "description": "Call any method on a project.task record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_project_task",
-        "tags": [
-          "project"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "project.task"
-      }
-    },
     "/api/purchase.order": {
       "get": {
         "summary": "Search & read Purchase Order",
@@ -7960,7 +6046,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -8133,72 +6219,6 @@
         "x-odoo-model": "purchase.order"
       }
     },
-    "/api/purchase.order/{id}/call": {
-      "post": {
-        "summary": "Call method on Purchase Order",
-        "description": "Call any method on a purchase.order record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_purchase_order",
-        "tags": [
-          "purchase"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "purchase.order"
-      }
-    },
     "/api/purchase.order.line": {
       "get": {
         "summary": "Search & read Purchase Order Line",
@@ -8231,7 +6251,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -8404,72 +6424,6 @@
         "x-odoo-model": "purchase.order.line"
       }
     },
-    "/api/purchase.order.line/{id}/call": {
-      "post": {
-        "summary": "Call method on Purchase Order Line",
-        "description": "Call any method on a purchase.order.line record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_purchase_order_line",
-        "tags": [
-          "purchase"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "purchase.order.line"
-      }
-    },
     "/api/res.partner": {
       "get": {
         "summary": "Search & read Contact",
@@ -8502,7 +6456,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -8675,72 +6629,6 @@
         "x-odoo-model": "res.partner"
       }
     },
-    "/api/res.partner/{id}/call": {
-      "post": {
-        "summary": "Call method on Contact",
-        "description": "Call any method on a res.partner record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_res_partner",
-        "tags": [
-          "res"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "res.partner"
-      }
-    },
     "/api/res.partner.bank": {
       "get": {
         "summary": "Search & read Bank Accounts",
@@ -8773,7 +6661,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -8946,72 +6834,6 @@
         "x-odoo-model": "res.partner.bank"
       }
     },
-    "/api/res.partner.bank/{id}/call": {
-      "post": {
-        "summary": "Call method on Bank Accounts",
-        "description": "Call any method on a res.partner.bank record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_res_partner_bank",
-        "tags": [
-          "res"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "res.partner.bank"
-      }
-    },
     "/api/res.partner.category": {
       "get": {
         "summary": "Search & read Partner Tags",
@@ -9044,7 +6866,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -9217,72 +7039,6 @@
         "x-odoo-model": "res.partner.category"
       }
     },
-    "/api/res.partner.category/{id}/call": {
-      "post": {
-        "summary": "Call method on Partner Tags",
-        "description": "Call any method on a res.partner.category record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_res_partner_category",
-        "tags": [
-          "res"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "res.partner.category"
-      }
-    },
     "/api/sale.order": {
       "get": {
         "summary": "Search & read Sales Order",
@@ -9315,7 +7071,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -9488,72 +7244,6 @@
         "x-odoo-model": "sale.order"
       }
     },
-    "/api/sale.order/{id}/call": {
-      "post": {
-        "summary": "Call method on Sales Order",
-        "description": "Call any method on a sale.order record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_sale_order",
-        "tags": [
-          "sale"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "sale.order"
-      }
-    },
     "/api/sale.order.line": {
       "get": {
         "summary": "Search & read Sales Order Line",
@@ -9586,7 +7276,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -9759,72 +7449,6 @@
         "x-odoo-model": "sale.order.line"
       }
     },
-    "/api/sale.order.line/{id}/call": {
-      "post": {
-        "summary": "Call method on Sales Order Line",
-        "description": "Call any method on a sale.order.line record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_sale_order_line",
-        "tags": [
-          "sale"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "sale.order.line"
-      }
-    },
     "/api/stock.location": {
       "get": {
         "summary": "Search & read Inventory Locations",
@@ -9857,7 +7481,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -10030,72 +7654,6 @@
         "x-odoo-model": "stock.location"
       }
     },
-    "/api/stock.location/{id}/call": {
-      "post": {
-        "summary": "Call method on Inventory Locations",
-        "description": "Call any method on a stock.location record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_stock_location",
-        "tags": [
-          "stock"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "stock.location"
-      }
-    },
     "/api/stock.move": {
       "get": {
         "summary": "Search & read Stock Move",
@@ -10128,7 +7686,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -10301,72 +7859,6 @@
         "x-odoo-model": "stock.move"
       }
     },
-    "/api/stock.move/{id}/call": {
-      "post": {
-        "summary": "Call method on Stock Move",
-        "description": "Call any method on a stock.move record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_stock_move",
-        "tags": [
-          "stock"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "stock.move"
-      }
-    },
     "/api/stock.move.line": {
       "get": {
         "summary": "Search & read Product Moves (Stock Move Line)",
@@ -10399,7 +7891,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -10572,72 +8064,6 @@
         "x-odoo-model": "stock.move.line"
       }
     },
-    "/api/stock.move.line/{id}/call": {
-      "post": {
-        "summary": "Call method on Product Moves (Stock Move Line)",
-        "description": "Call any method on a stock.move.line record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_stock_move_line",
-        "tags": [
-          "stock"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "stock.move.line"
-      }
-    },
     "/api/stock.picking": {
       "get": {
         "summary": "Search & read Transfer",
@@ -10670,7 +8096,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -10843,72 +8269,6 @@
         "x-odoo-model": "stock.picking"
       }
     },
-    "/api/stock.picking/{id}/call": {
-      "post": {
-        "summary": "Call method on Transfer",
-        "description": "Call any method on a stock.picking record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_stock_picking",
-        "tags": [
-          "stock"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "stock.picking"
-      }
-    },
     "/api/stock.picking.type": {
       "get": {
         "summary": "Search & read Picking Type",
@@ -10941,7 +8301,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -11114,72 +8474,6 @@
         "x-odoo-model": "stock.picking.type"
       }
     },
-    "/api/stock.picking.type/{id}/call": {
-      "post": {
-        "summary": "Call method on Picking Type",
-        "description": "Call any method on a stock.picking.type record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_stock_picking_type",
-        "tags": [
-          "stock"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "stock.picking.type"
-      }
-    },
     "/api/stock.quant": {
       "get": {
         "summary": "Search & read Quants",
@@ -11212,7 +8506,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -11385,72 +8679,6 @@
         "x-odoo-model": "stock.quant"
       }
     },
-    "/api/stock.quant/{id}/call": {
-      "post": {
-        "summary": "Call method on Quants",
-        "description": "Call any method on a stock.quant record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_stock_quant",
-        "tags": [
-          "stock"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "stock.quant"
-      }
-    },
     "/api/stock.warehouse": {
       "get": {
         "summary": "Search & read Warehouse",
@@ -11483,7 +8711,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -11656,72 +8884,6 @@
         "x-odoo-model": "stock.warehouse"
       }
     },
-    "/api/stock.warehouse/{id}/call": {
-      "post": {
-        "summary": "Call method on Warehouse",
-        "description": "Call any method on a stock.warehouse record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_stock_warehouse",
-        "tags": [
-          "stock"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "stock.warehouse"
-      }
-    },
     "/api/uom.category": {
       "get": {
         "summary": "Search & read Product UoM Categories",
@@ -11754,7 +8916,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -11927,72 +9089,6 @@
         "x-odoo-model": "uom.category"
       }
     },
-    "/api/uom.category/{id}/call": {
-      "post": {
-        "summary": "Call method on Product UoM Categories",
-        "description": "Call any method on a uom.category record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_uom_category",
-        "tags": [
-          "uom"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
-        "x-odoo-model": "uom.category"
-      }
-    },
     "/api/uom.uom": {
       "get": {
         "summary": "Search & read Product Unit of Measure",
@@ -12025,7 +9121,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "default": 80
+              "default": 20
             }
           },
           {
@@ -12195,72 +9291,6 @@
           }
         },
         "x-odoo-method": "unlink",
-        "x-odoo-model": "uom.uom"
-      }
-    },
-    "/api/uom.uom/{id}/call": {
-      "post": {
-        "summary": "Call method on Product Unit of Measure",
-        "description": "Call any method on a uom.uom record. Uses Odoo `execute_kw` with method name.",
-        "operationId": "call_uom_uom",
-        "tags": [
-          "uom"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "method": {
-                    "type": "string",
-                    "description": "Method name to call",
-                    "example": "action_confirm"
-                  },
-                  "args": {
-                    "type": "array",
-                    "items": {},
-                    "description": "Positional arguments"
-                  },
-                  "kwargs": {
-                    "type": "object",
-                    "description": "Keyword arguments"
-                  }
-                },
-                "required": [
-                  "method"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Method call result",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {}
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "execute_kw",
         "x-odoo-model": "uom.uom"
       }
     }
