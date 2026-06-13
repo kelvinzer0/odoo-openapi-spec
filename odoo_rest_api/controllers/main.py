@@ -2,6 +2,7 @@ import json
 import functools
 import base64
 import secrets
+import os
 
 from odoo import http
 from odoo.http import request, Response
@@ -175,6 +176,48 @@ class RestApiController(http.Controller):
         key = _get_token_key(user_id)
         ICP.set_param(key, '')
         return {'revoked': True}
+
+    # ═══════════════════════════════════════════
+    # OpenAPI Spec
+    # ═══════════════════════════════════════════
+    def _read_spec(self, filename):
+        spec_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'static', 'spec', filename)
+        with open(spec_path, 'r') as f:
+            return f.read()
+
+    @http.route('/api/spec', type='http', auth='none', methods=['GET'], csrf=False)
+    def spec_full(self, **kwargs):
+        data = self._read_spec('odoo-openapi.json')
+        return Response(data, content_type='application/json')
+
+    @http.route('/api/spec/compact', type='http', auth='none', methods=['GET'], csrf=False)
+    def spec_compact(self, **kwargs):
+        data = self._read_spec('odoo-openapi-compact.json')
+        return Response(data, content_type='application/json')
+
+    @http.route('/api/spec/swagger', type='http', auth='none', methods=['GET'], csrf=False)
+    def spec_swagger_ui(self, **kwargs):
+        base = request.httprequest.host_url
+        html = f'''<!DOCTYPE html>
+<html>
+<head>
+    <title>Odoo REST API - Swagger UI</title>
+    <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist@5/swagger-ui.css"/>
+</head>
+<body>
+    <div id="swagger-ui"></div>
+    <script src="https://unpkg.com/swagger-ui-dist@5/swagger-ui-bundle.js"></script>
+    <script>
+        SwaggerUIBundle({{
+            url: "{base}api/spec/compact",
+            dom_id: '#swagger-ui',
+            presets: [SwaggerUIBundle.presets.apis, SwaggerUIBundle.SwaggerUIStandalonePreset],
+            layout: "BaseLayout"
+        }});
+    </script>
+</body>
+</html>'''
+        return Response(html, content_type='text/html')
 
     # ═══════════════════════════════════════════
     # GET /api/{model} — search_read

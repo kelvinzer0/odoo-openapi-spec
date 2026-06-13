@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <record id="action_rest_api_credentials" model="ir.actions.act_url">
-        <field name="name">REST API Credentials</field>
+        <field name="name">API Credentials</field>
         <field name="url">/api/credentials</field>
+        <field name="target">new</field>
+    </record>
+
+    <record id="action_rest_api_swagger" model="ir.actions.act_url">
+        <field name="name">Swagger UI</field>
+        <field name="url">/api/spec/swagger</field>
+        <field name="target">new</field>
+    </record>
+
+    <record id="action_rest_api_spec_json" model="ir.actions.act_url">
+        <field name="name">OpenAPI Spec (JSON)</field>
+        <field name="url">/api/spec</field>
         <field name="target">new</field>
     </record>
 
@@ -15,4 +27,16 @@
               parent="menu_rest_api_root"
               action="action_rest_api_credentials"
               sequence="10"/>
+
+    <menuitem id="menu_rest_api_swagger"
+              name="Swagger UI"
+              parent="menu_rest_api_root"
+              action="action_rest_api_swagger"
+              sequence="20"/>
+
+    <menuitem id="menu_rest_api_spec"
+              name="OpenAPI Spec"
+              parent="menu_rest_api_root"
+              action="action_rest_api_spec_json"
+              sequence="30"/>
 </odoo>
