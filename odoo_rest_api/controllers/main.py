@@ -3,6 +3,7 @@ import functools
 import base64
 import secrets
 import os
+from datetime import date, datetime
 
 from odoo import http
 from odoo.http import request, Response
@@ -62,7 +63,7 @@ TOKEN_PREFIX = 'odoo-rest-api:'
 
 def json_response(data, status=200):
     return Response(
-        json.dumps(data),
+        json.dumps(data, default=str),
         status=status,
         content_type='application/json',
     )
