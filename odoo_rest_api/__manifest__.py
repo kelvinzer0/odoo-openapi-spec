@@ -21,6 +21,7 @@
     'depends': ['base'],
     'data': [
         'views/credentials_template.xml',
+        'views/menu.xml',
     ],
     'assets': {},
     'installable': True,

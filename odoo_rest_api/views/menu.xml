@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_rest_api_credentials" model="ir.actions.act_url">
+        <field name="name">REST API Credentials</field>
+        <field name="url">/api/credentials</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="menu_rest_api_root"
+              name="REST API"
+              sequence="100"/>
+
+    <menuitem id="menu_rest_api_credentials"
+              name="API Credentials"
+              parent="menu_rest_api_root"
+              action="action_rest_api_credentials"
+              sequence="10"/>
+</odoo>
