@@ -1,7 +1,7 @@
 {
     'name': 'REST API',
     'version': '17.0.1.0.0',
-    'summary': 'REST API for Odoo models with upsert support',
+    'summary': 'REST API for Odoo models with Bearer token & upsert support',
     'description': '''
         Exposes Odoo models as REST endpoints:
 
@@ -11,8 +11,8 @@
         - PUT    /api/<model>/<id>     → update by ID
         - DELETE /api/<model>/<id>     → delete record
 
-        Upsert uses _key object to search existing record.
-        Authentication: HTTP Basic Auth (Odoo user email + password).
+        Authentication: Bearer token (generated from /api/credentials)
+        or HTTP Basic Auth (Odoo user email + password).
     ''',
     'category': 'Technical',
     'author': 'Warung Lakku',
@@ -23,7 +23,6 @@
         'views/credentials_template.xml',
         'views/menu.xml',
     ],
-    'assets': {},
     'installable': True,
     'application': True,
     'auto_install': False,

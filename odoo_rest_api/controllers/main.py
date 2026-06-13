@@ -90,7 +90,6 @@ def authenticate():
 
 
 def _authenticate_bearer(token):
-    ICP = request.env['ir.config_parameter'].sudo()
     IParam = request.env['ir.config_parameter'].with_context(active_test=False).sudo()
 
     keys = IParam.search([('key', '=like', f'{TOKEN_PREFIX}%')])
@@ -148,7 +147,7 @@ class RestApiController(http.Controller):
             'user_initial': initials,
         })
 
-    @http.route('/api/credentials/check', type='json', auth='user', methods=['GET'], csrf=False)
+    @http.route('/api/credentials/check', type='json', auth='user', csrf=False)
     def check_token(self, **kwargs):
         user_id = request.env.user.id
         ICP = request.env['ir.config_parameter'].sudo()
