@@ -5,13 +5,12 @@
     "description": "Compact OpenAPI spec for key business models only.\nOdoo 17.0\n\nModels included: product, partner, sale, purchase, account, stock, CRM, POS, HR, MRP, project, UoM",
     "version": "17.0-20260609",
     "contact": {
-      "name": "Warung Lakku",
-      "url": "https://odoo.warunglakku.com"
+      "name": "Odoo Instance"
     }
   },
   "servers": [
     {
-      "url": "https://odoo.warunglakku.com",
+      "url": "https://your-odoo-instance.com",
       "description": "Odoo Instance"
     }
   ],
