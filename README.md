@@ -1,151 +1,153 @@
-# Odoo OpenAPI Spec
+# Odoo REST API
 
-Auto-generated OpenAPI 3.1.0 specification from Odoo 17.0 instance.
+OpenAPI 3.1.0 spec + REST API module for Odoo 17. Expose any Odoo model as REST endpoints with Bearer token authentication.
 
-## Files
+## Features
 
-| File | Size | Description |
-|---|---|---|
-| `odoo-openapi.json` | ~11 MB | Full spec — all 494 models |
-| `odoo-openapi-compact.json` | ~2.3 MB | Business models only (135 paths) |
-| `odoo-openapi-generator.py` | — | Generator script (reusable) |
-| `odoo_rest_api/` | — | Odoo module — REST API controller |
-| `server.py` | — | FastAPI proxy (standalone alternative) |
+- **REST API** for all Odoo models (45 business models)
+- **Bearer Token** authentication (generate from UI, no password needed)
+- **Upsert** support (create or update by unique key)
+- **API Console** with Scalar UI for interactive documentation
+- **OpenAPI 3.1.0** spec served at `/api/spec`
 
-## Models Included (Compact)
-
-Product, Partner, Sale, Purchase, Account/Invoice, Stock, CRM, POS, HR, MRP, Project, UoM
-
-## Endpoint Pattern
-
-| Method | Path | Description | Odoo Method |
-|---|---|---|---|
-| `GET` | `/api/{model}` | Search & read records | `search_read()` |
-| `GET` | `/api/{model}/{id}` | Read single record | `read()` |
-| `PUT` | `/api/{model}` | **Upsert** (create/update by unique key) | `search()` → `create()` or `write()` |
-| `PUT` | `/api/{model}/{id}` | Update by ID | `write()` |
-| `DELETE` | `/api/{model}/{id}` | Delete record | `unlink()` |
-
-### Upsert
-
-Use `_key` to search existing record. If found → update, if not → create.
-
-```json
-PUT /api/res.partner
-{
-  "_key": { "email": "john@example.com" },
-  "name": "John Doe",
-  "phone": "+6281234"
-}
-```
-
-### Unique Key per Model
-
-| Model | Key Field |
-|---|---|
-| `account.account` | `code` |
-| `res.partner` | `email` |
-| `product.product` | `barcode` |
-| `product.template` | `name` |
-| `sale.order` | `name` |
-| `purchase.order` | `name` |
-| `stock.picking` | `name` |
-| `hr.employee` | `work_email` |
-| `uom.uom` | `name` |
-
-See `MODEL_KEYS` in source for full list.
-
-## Install as Odoo Module
+## Installation
 
 ### Prerequisites
 
-- Odoo 17.0 running instance
+- Odoo 17.0 running instance (Docker or bare metal)
 - Access to addons path
 
 ### Steps
 
-1. Copy `odoo_rest_api/` folder to your Odoo addons path:
+1. Copy `odoo_rest_api/` to your Odoo addons path:
 
 ```bash
 cp -r odoo_rest_api /path/to/odoo/addons/
 ```
 
-Or add the repo directory to your Odoo config:
+Or add the module directory to your Odoo config:
 
 ```ini
 [options]
 addons_path = /path/to/odoo/addons,/path/to/odoo-openapi-spec
 ```
 
-2. Restart Odoo server:
+2. Restart Odoo:
 
 ```bash
-systemctl restart odoo
+docker restart odoo
 # or
-./odoo-bin -c odoo.conf
+systemctl restart odoo
 ```
 
-3. Activate **Developer Mode**:
-   - Go to `Settings` → scroll to bottom → click **Activate the developer mode**
+3. Activate **Developer Mode**: Settings → Activate the developer mode
 
-4. Install the module:
-   - Go to `Apps` → click **Update Apps List** (menu icon)
-   - Search for **"REST API"**
-   - Click **Install**
+4. Install module: Apps → Update Apps List → Search "REST API" → Install
 
-5. Test the API:
+5. Open **REST API → API Console** in the Odoo menu
+
+## Authentication
+
+### Bearer Token (Recommended)
+
+1. Go to **REST API → API Console** in Odoo backend
+2. Click **Generate Token**
+3. Copy the token
 
 ```bash
-# Search partners
+curl -H "Authorization: Bearer <token>" \
+  "http://localhost:8069/api/res.partner?limit=3&fields=name,email"
+```
+
+### Basic Auth
+
+```bash
 curl -u "email:password" \
   "http://localhost:8069/api/res.partner?limit=3&fields=name,email"
+```
 
-# Upsert partner
-curl -u "email:password" \
+## API Endpoints
+
+| Method | Path | Description |
+|---|---|---|
+| `GET` | `/api/{model}` | Search & read records |
+| `GET` | `/api/{model}/{id}` | Read single record |
+| `PUT` | `/api/{model}` | Upsert (create/update by unique key) |
+| `PUT` | `/api/{model}/{id}` | Update by ID |
+| `DELETE` | `/api/{model}/{id}` | Delete record |
+
+### Query Parameters (GET)
+
+| Param | Example | Description |
+|---|---|---|
+| `fields` | `name,email,phone` | Comma-separated field list |
+| `limit` | `10` | Max records (default 20) |
+| `offset` | `0` | Pagination offset |
+| `order` | `name asc` | Sort order |
+| `domain` | `[["active","=",true]]` | Odoo domain filter (JSON) |
+
+### Upsert
+
+Use `_key` to find existing record. If found → update, if not → create.
+
+```bash
+curl -H "Authorization: Bearer <token>" \
   -X PUT "http://localhost:8069/api/res.partner" \
   -H "Content-Type: application/json" \
-  -d '{"_key":{"email":"test@example.com"},"name":"Test Partner"}'
-
-# Read by ID
-curl -u "email:password" \
-  "http://localhost:8069/api/res.partner/1"
-
-# Delete
-curl -u "email:password" \
-  -X DELETE "http://localhost:8069/api/res.partner/1"
+  -d '{
+    "_key": { "email": "john@example.com" },
+    "name": "John Doe",
+    "phone": "+6281234"
+  }'
 ```
 
-### Authentication
+### Unique Keys
 
-HTTP Basic Auth using Odoo email + password:
+| Model | Key |
+|---|---|
+| `account.account` | `code` |
+| `account.journal` | `code` |
+| `crm.lead` | `name` |
+| `hr.employee` | `work_email` |
+| `product.product` | `barcode` |
+| `product.template` | `name` |
+| `purchase.order` | `name` |
+| `res.partner` | `email` |
+| `sale.order` | `name` |
+| `stock.picking` | `name` |
+
+See `MODEL_KEYS` in `controllers/main.py` for full list.
+
+## Supported Models
+
+Account, Journal, Move, Payment, Tax, CRM (Lead, Stage, Tag), HR (Department, Employee, Job), MRP (BOM, Production, Workorder), POS (Config, Order, Session), Product (Attribute, Category, Product, Template), Project, Purchase, Partner, Sale, Stock (Location, Move, Picking, Quant, Warehouse), UoM
+
+## API Reference
+
+- **Scalar UI**: `http://localhost:8069/api/spec/docs`
+- **Full spec**: `http://localhost:8069/api/spec` (469 paths, all Odoo models)
+- **Compact spec**: `http://localhost:8069/api/spec/compact` (45 paths, business models)
+
+## File Structure
 
 ```
-Authorization: Basic base64(email:password)
+odoo_rest_api/
+├── __init__.py
+├── __manifest__.py
+├── controllers/
+│   ├── __init__.py
+│   └── main.py          # REST API controller + auth
+├── static/spec/
+│   ├── odoo-openapi.json        # Full OpenAPI spec
+│   └── odoo-openapi-compact.json # Compact spec
+└── views/
+    ├── credentials_template.xml # API Console UI
+    └── menu.xml                 # Odoo menu items
 ```
-
-## Standalone FastAPI Proxy (Alternative)
-
-If you don't want to install the Odoo module, use the FastAPI proxy:
-
-```bash
-pip install fastapi uvicorn httpx
-python3 server.py
-```
-
-Then open Swagger UI at `http://localhost:8000/docs`.
-
-The proxy translates REST calls to Odoo XML-RPC automatically.
-
-## Regenerate Spec
-
-```bash
-python3 odoo-openapi-generator.py > odoo-openapi.json
-```
-
-Edit the config in the script (URL, DB, USER, PASS) to point to your Odoo instance.
 
 ## Odoo Version
 
 ```
 Server: 17.0
+OpenAPI: 3.1.0
 ```
