@@ -94,7 +94,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "name,code,id"
           },
           {
             "name": "limit",
@@ -210,7 +210,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "name,code,id"
           }
         ],
         "responses": {
@@ -364,7 +365,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "name,code,type,id"
           },
           {
             "name": "limit",
@@ -480,7 +481,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "name,code,type,id"
           }
         ],
         "responses": {
@@ -634,7 +636,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "name,partner_id,state,amount_total,id"
           },
           {
             "name": "limit",
@@ -750,7 +752,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "name,partner_id,state,amount_total,id"
           }
         ],
         "responses": {
@@ -904,7 +907,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "name,account_id,debit,credit,id"
           },
           {
             "name": "limit",
@@ -1020,7 +1023,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "name,account_id,debit,credit,id"
           }
         ],
         "responses": {
@@ -1174,7 +1178,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "name,state,amount,id"
           },
           {
             "name": "limit",
@@ -1290,7 +1294,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "name,state,amount,id"
           }
         ],
         "responses": {
@@ -1444,7 +1449,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "name,amount,type,id"
           },
           {
             "name": "limit",
@@ -1560,7 +1565,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "name,amount,type,id"
           }
         ],
         "responses": {
@@ -1714,7 +1720,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "name,id"
           },
           {
             "name": "limit",
@@ -1830,7 +1836,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "name,id"
           }
         ],
         "responses": {
@@ -1984,7 +1991,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "name,partner_id,stage_id,id"
           },
           {
             "name": "limit",
@@ -2100,7 +2107,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "name,partner_id,stage_id,id"
           }
         ],
         "responses": {
@@ -2254,7 +2262,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "name,id"
           },
           {
             "name": "limit",
@@ -2370,7 +2378,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "name,id"
           }
         ],
         "responses": {
@@ -2524,7 +2533,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "name,id"
           },
           {
             "name": "limit",
@@ -2640,7 +2649,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "name,id"
           }
         ],
         "responses": {
@@ -2794,7 +2804,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "name,id"
           },
           {
             "name": "limit",
@@ -2910,7 +2920,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "name,id"
           }
         ],
         "responses": {
@@ -3064,7 +3075,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "name,work_email,department_id,id"
           },
           {
             "name": "limit",
@@ -3180,7 +3191,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "name,work_email,department_id,id"
           }
         ],
         "responses": {
@@ -3334,7 +3346,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "name,id"
           },
           {
             "name": "limit",
@@ -3450,7 +3462,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "name,id"
           }
         ],
         "responses": {
@@ -3604,7 +3617,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "subject,model,id"
           },
           {
             "name": "limit",
@@ -3720,7 +3733,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "subject,model,id"
           }
         ],
         "responses": {
@@ -3874,7 +3888,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "id"
           },
           {
             "name": "limit",
@@ -3990,7 +4004,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "id"
           }
         ],
         "responses": {
@@ -4144,7 +4159,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "code,product_tmpl_id,id"
           },
           {
             "name": "limit",
@@ -4260,7 +4275,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "code,product_tmpl_id,id"
           }
         ],
         "responses": {
@@ -4414,7 +4430,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "name,state,id"
           },
           {
             "name": "limit",
@@ -4530,7 +4546,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "name,state,id"
           }
         ],
         "responses": {
@@ -4684,7 +4701,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "name,state,id"
           },
           {
             "name": "limit",
@@ -4800,7 +4817,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "name,state,id"
           }
         ],
         "responses": {
@@ -4954,7 +4972,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "name,id"
           },
           {
             "name": "limit",
@@ -5070,7 +5088,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "name,id"
           }
         ],
         "responses": {
@@ -5224,7 +5243,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "name,state,partner_id,id"
           },
           {
             "name": "limit",
@@ -5340,7 +5359,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "name,state,partner_id,id"
           }
         ],
         "responses": {
@@ -5494,7 +5514,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "name,order_id,product_id,id"
           },
           {
             "name": "limit",
@@ -5610,7 +5630,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "name,order_id,product_id,id"
           }
         ],
         "responses": {
@@ -5764,7 +5785,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "name,state,id"
           },
           {
             "name": "limit",
@@ -5880,7 +5901,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "name,state,id"
           }
         ],
         "responses": {
@@ -6034,7 +6056,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "name,id"
           },
           {
             "name": "limit",
@@ -6150,7 +6172,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "name,id"
           }
         ],
         "responses": {
@@ -6304,7 +6327,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "name,attribute_id,id"
           },
           {
             "name": "limit",
@@ -6420,7 +6443,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "name,attribute_id,id"
           }
         ],
         "responses": {
@@ -6574,7 +6598,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "name,id"
           },
           {
             "name": "limit",
@@ -6690,7 +6714,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "name,id"
           }
         ],
         "responses": {
@@ -6844,7 +6869,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "name,default_code,barcode,list_price,id"
           },
           {
             "name": "limit",
@@ -6960,7 +6985,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "name,default_code,barcode,list_price,id"
           }
         ],
         "responses": {
@@ -7114,7 +7140,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "name,default_code,barcode,list_price,id"
           },
           {
             "name": "limit",
@@ -7230,7 +7256,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "name,default_code,barcode,list_price,id"
           }
         ],
         "responses": {
@@ -7384,7 +7411,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "name,stage_id,id"
           },
           {
             "name": "limit",
@@ -7500,7 +7527,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "name,stage_id,id"
           }
         ],
         "responses": {
@@ -7654,7 +7682,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "name,project_id,state,id"
           },
           {
             "name": "limit",
@@ -7770,7 +7798,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "name,project_id,state,id"
           }
         ],
         "responses": {
@@ -7924,7 +7953,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "name,partner_id,state,id"
           },
           {
             "name": "limit",
@@ -8040,7 +8069,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "name,partner_id,state,id"
           }
         ],
         "responses": {
@@ -8194,7 +8224,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "name,order_id,product_id,id"
           },
           {
             "name": "limit",
@@ -8310,7 +8340,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "name,order_id,product_id,id"
           }
         ],
         "responses": {
@@ -8464,7 +8495,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "name,email,phone,id"
           },
           {
             "name": "limit",
@@ -8580,7 +8611,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "name,email,phone,id"
           }
         ],
         "responses": {
@@ -8734,7 +8766,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "acc_number,partner_id,id"
           },
           {
             "name": "limit",
@@ -8850,7 +8882,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "acc_number,partner_id,id"
           }
         ],
         "responses": {
@@ -9004,7 +9037,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "name,id"
           },
           {
             "name": "limit",
@@ -9120,7 +9153,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "name,id"
           }
         ],
         "responses": {
@@ -9274,7 +9308,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "name,partner_id,state,id"
           },
           {
             "name": "limit",
@@ -9390,7 +9424,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "name,partner_id,state,id"
           }
         ],
         "responses": {
@@ -9544,7 +9579,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "name,order_id,product_id,id"
           },
           {
             "name": "limit",
@@ -9660,7 +9695,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "name,order_id,product_id,id"
           }
         ],
         "responses": {
@@ -9814,7 +9850,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "name,complete_name,id"
           },
           {
             "name": "limit",
@@ -9930,7 +9966,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "name,complete_name,id"
           }
         ],
         "responses": {
@@ -10084,7 +10121,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "name,state,product_id,id"
           },
           {
             "name": "limit",
@@ -10200,7 +10237,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "name,state,product_id,id"
           }
         ],
         "responses": {
@@ -10354,7 +10392,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "name,product_id,state,id"
           },
           {
             "name": "limit",
@@ -10470,7 +10508,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "name,product_id,state,id"
           }
         ],
         "responses": {
@@ -10624,7 +10663,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "name,state,partner_id,id"
           },
           {
             "name": "limit",
@@ -10740,7 +10779,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "name,state,partner_id,id"
           }
         ],
         "responses": {
@@ -10894,7 +10934,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "name,id"
           },
           {
             "name": "limit",
@@ -11010,7 +11050,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "name,id"
           }
         ],
         "responses": {
@@ -11164,7 +11205,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "product_id,location_id,quantity,id"
           },
           {
             "name": "limit",
@@ -11280,7 +11321,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "product_id,location_id,quantity,id"
           }
         ],
         "responses": {
@@ -11434,7 +11476,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "name,id"
           },
           {
             "name": "limit",
@@ -11550,7 +11592,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "name,id"
           }
         ],
         "responses": {
@@ -11704,7 +11747,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "name,id"
           },
           {
             "name": "limit",
@@ -11820,7 +11863,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "name,id"
           }
         ],
         "responses": {
@@ -11974,7 +12018,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,list_price"
+            "example": "name,category_id,id"
           },
           {
             "name": "limit",
@@ -12090,7 +12134,8 @@
             "description": "Comma-separated field names to return",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "name,category_id,id"
           }
         ],
         "responses": {
