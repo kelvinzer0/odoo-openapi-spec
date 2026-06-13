@@ -197,17 +197,16 @@ class RestApiController(http.Controller):
 
     @http.route('/api/spec/docs', type='http', auth='none', methods=['GET'], csrf=False)
     def spec_docs(self, **kwargs):
-        base = request.httprequest.host_url
-        html = f'''<!DOCTYPE html>
+        html = '''<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Odoo REST API Docs</title>
-    <style>body {{ margin: 0; padding: 0; }}</style>
+    <style>body { margin: 0; padding: 0; }</style>
 </head>
 <body>
-    <script id="api-reference" data-url="{base}api/spec/compact"></script>
+    <script id="api-reference" data-url="/api/spec/compact"></script>
     <script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference"></script>
 </body>
 </html>'''
