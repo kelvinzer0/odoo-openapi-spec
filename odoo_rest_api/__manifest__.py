@@ -19,7 +19,9 @@
     'website': 'https://odoo.warunglakku.com',
     'license': 'LGPL-3',
     'depends': ['base'],
-    'data': [],
+    'data': [
+        'views/credentials_template.xml',
+    ],
     'assets': {},
     'installable': True,
     'application': True,

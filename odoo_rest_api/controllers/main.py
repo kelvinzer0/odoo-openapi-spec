@@ -101,6 +101,13 @@ def with_auth(func):
 
 class RestApiController(http.Controller):
 
+    @http.route('/api/credentials', type='http', auth='user')
+    def credentials_page(self, **kwargs):
+        user = request.env.user
+        return request.render('odoo_rest_api.credentials_page', {
+            'user_email': user.email or '',
+        })
+
     # ═══════════════════════════════════════════
     # GET /api/{model} — search_read
     # ═══════════════════════════════════════════
