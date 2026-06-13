@@ -195,30 +195,6 @@ class RestApiController(http.Controller):
         data = self._read_spec('odoo-openapi-compact.json')
         return Response(data, content_type='application/json')
 
-    @http.route('/api/spec/swagger', type='http', auth='none', methods=['GET'], csrf=False)
-    def spec_swagger_ui(self, **kwargs):
-        base = request.httprequest.host_url
-        html = f'''<!DOCTYPE html>
-<html>
-<head>
-    <title>Odoo REST API - Swagger UI</title>
-    <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist@5/swagger-ui.css"/>
-</head>
-<body>
-    <div id="swagger-ui"></div>
-    <script src="https://unpkg.com/swagger-ui-dist@5/swagger-ui-bundle.js"></script>
-    <script>
-        SwaggerUIBundle({{
-            url: "{base}api/spec/compact",
-            dom_id: '#swagger-ui',
-            presets: [SwaggerUIBundle.presets.apis, SwaggerUIBundle.SwaggerUIStandalonePreset],
-            layout: "BaseLayout"
-        }});
-    </script>
-</body>
-</html>'''
-        return Response(html, content_type='text/html')
-
     # ═══════════════════════════════════════════
     # GET /api/{model} — search_read
     # ═══════════════════════════════════════════
