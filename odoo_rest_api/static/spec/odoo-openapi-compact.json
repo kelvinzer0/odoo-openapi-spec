@@ -120,6 +120,26 @@
               "type": "string"
             },
             "example": "code asc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -138,7 +158,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "account.account"
+        "x-odoo-model": "account.account",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Account",
@@ -191,7 +219,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "account.account"
+        "x-odoo-model": "account.account",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/account.journal": {
@@ -245,6 +281,26 @@
               "type": "string"
             },
             "example": "name asc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -263,7 +319,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "account.journal"
+        "x-odoo-model": "account.journal",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Journal",
@@ -316,7 +380,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "account.journal"
+        "x-odoo-model": "account.journal",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/account.move": {
@@ -370,6 +442,26 @@
               "type": "string"
             },
             "example": "date desc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -388,7 +480,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "account.move"
+        "x-odoo-model": "account.move",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Move",
@@ -441,7 +541,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "account.move"
+        "x-odoo-model": "account.move",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/account.move.line": {
@@ -495,6 +603,26 @@
               "type": "string"
             },
             "example": "id asc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -513,7 +641,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "account.move.line"
+        "x-odoo-model": "account.move.line",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Line",
@@ -567,7 +703,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "account.move.line"
+        "x-odoo-model": "account.move.line",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/account.payment": {
@@ -621,6 +765,26 @@
               "type": "string"
             },
             "example": "date desc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -639,7 +803,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "account.payment"
+        "x-odoo-model": "account.payment",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Payment",
@@ -694,7 +866,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "account.payment"
+        "x-odoo-model": "account.payment",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/account.tax": {
@@ -748,6 +928,26 @@
               "type": "string"
             },
             "example": "name asc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -766,7 +966,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "account.tax"
+        "x-odoo-model": "account.tax",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Tax",
@@ -819,7 +1027,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "account.tax"
+        "x-odoo-model": "account.tax",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/account.tax.group": {
@@ -873,6 +1089,26 @@
               "type": "string"
             },
             "example": "name asc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -891,7 +1127,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "account.tax.group"
+        "x-odoo-model": "account.tax.group",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Group",
@@ -942,7 +1186,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "account.tax.group"
+        "x-odoo-model": "account.tax.group",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/crm.lead": {
@@ -996,6 +1248,26 @@
               "type": "string"
             },
             "example": "create_date desc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -1014,7 +1286,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "crm.lead"
+        "x-odoo-model": "crm.lead",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Lead",
@@ -1066,7 +1346,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "crm.lead"
+        "x-odoo-model": "crm.lead",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/crm.stage": {
@@ -1120,6 +1408,26 @@
               "type": "string"
             },
             "example": "sequence asc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -1138,7 +1446,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "crm.stage"
+        "x-odoo-model": "crm.stage",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Stage",
@@ -1190,7 +1506,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "crm.stage"
+        "x-odoo-model": "crm.stage",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/crm.tag": {
@@ -1244,6 +1568,26 @@
               "type": "string"
             },
             "example": "name asc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -1262,7 +1606,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "crm.tag"
+        "x-odoo-model": "crm.tag",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Tag",
@@ -1313,7 +1665,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "crm.tag"
+        "x-odoo-model": "crm.tag",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/hr.department": {
@@ -1367,6 +1727,26 @@
               "type": "string"
             },
             "example": "name asc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -1385,7 +1765,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "hr.department"
+        "x-odoo-model": "hr.department",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Department",
@@ -1436,7 +1824,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "hr.department"
+        "x-odoo-model": "hr.department",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/hr.employee": {
@@ -1490,6 +1886,26 @@
               "type": "string"
             },
             "example": "name asc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -1508,7 +1924,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "hr.employee"
+        "x-odoo-model": "hr.employee",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Employee",
@@ -1560,7 +1984,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "hr.employee"
+        "x-odoo-model": "hr.employee",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/hr.job": {
@@ -1614,6 +2046,26 @@
               "type": "string"
             },
             "example": "name asc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -1632,7 +2084,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "hr.job"
+        "x-odoo-model": "hr.job",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Job",
@@ -1683,7 +2143,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "hr.job"
+        "x-odoo-model": "hr.job",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/mail.message": {
@@ -1737,6 +2205,26 @@
               "type": "string"
             },
             "example": "date desc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -1755,7 +2243,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "mail.message"
+        "x-odoo-model": "mail.message",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Message",
@@ -1810,7 +2306,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "mail.message"
+        "x-odoo-model": "mail.message",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/mail.thread": {
@@ -1864,6 +2368,26 @@
               "type": "string"
             },
             "example": "id asc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -1882,7 +2406,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "mail.thread"
+        "x-odoo-model": "mail.thread",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Thread",
@@ -1934,7 +2466,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "mail.thread"
+        "x-odoo-model": "mail.thread",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/mrp.bom": {
@@ -1988,6 +2528,26 @@
               "type": "string"
             },
             "example": "code asc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -2006,7 +2566,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "mrp.bom"
+        "x-odoo-model": "mrp.bom",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Bom",
@@ -2059,7 +2627,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "mrp.bom"
+        "x-odoo-model": "mrp.bom",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/mrp.production": {
@@ -2113,6 +2689,26 @@
               "type": "string"
             },
             "example": "date_start desc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -2131,7 +2727,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "mrp.production"
+        "x-odoo-model": "mrp.production",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Production",
@@ -2185,7 +2789,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "mrp.production"
+        "x-odoo-model": "mrp.production",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/mrp.workorder": {
@@ -2239,6 +2851,26 @@
               "type": "string"
             },
             "example": "id asc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -2257,7 +2889,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "mrp.workorder"
+        "x-odoo-model": "mrp.workorder",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Workorder",
@@ -2310,7 +2950,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "mrp.workorder"
+        "x-odoo-model": "mrp.workorder",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/pos.config": {
@@ -2364,6 +3012,26 @@
               "type": "string"
             },
             "example": "name asc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -2382,7 +3050,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "pos.config"
+        "x-odoo-model": "pos.config",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Config",
@@ -2433,7 +3109,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "pos.config"
+        "x-odoo-model": "pos.config",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/pos.order": {
@@ -2487,6 +3171,26 @@
               "type": "string"
             },
             "example": "date_order desc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -2505,7 +3209,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "pos.order"
+        "x-odoo-model": "pos.order",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Order",
@@ -2558,7 +3270,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "pos.order"
+        "x-odoo-model": "pos.order",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/pos.order.line": {
@@ -2612,6 +3332,26 @@
               "type": "string"
             },
             "example": "id asc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -2630,7 +3370,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "pos.order.line"
+        "x-odoo-model": "pos.order.line",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Line",
@@ -2685,7 +3433,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "pos.order.line"
+        "x-odoo-model": "pos.order.line",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/pos.session": {
@@ -2739,6 +3495,26 @@
               "type": "string"
             },
             "example": "start_at desc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -2757,7 +3533,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "pos.session"
+        "x-odoo-model": "pos.session",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Session",
@@ -2810,7 +3594,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "pos.session"
+        "x-odoo-model": "pos.session",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/product.attribute": {
@@ -2864,6 +3656,26 @@
               "type": "string"
             },
             "example": "name asc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -2882,7 +3694,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "product.attribute"
+        "x-odoo-model": "product.attribute",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Attribute",
@@ -2933,7 +3753,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "product.attribute"
+        "x-odoo-model": "product.attribute",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/product.attribute.value": {
@@ -2987,6 +3815,26 @@
               "type": "string"
             },
             "example": "sequence asc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -3005,7 +3853,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "product.attribute.value"
+        "x-odoo-model": "product.attribute.value",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Value",
@@ -3057,7 +3913,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "product.attribute.value"
+        "x-odoo-model": "product.attribute.value",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/product.category": {
@@ -3111,6 +3975,26 @@
               "type": "string"
             },
             "example": "name asc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -3129,7 +4013,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "product.category"
+        "x-odoo-model": "product.category",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Category",
@@ -3180,7 +4072,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "product.category"
+        "x-odoo-model": "product.category",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/product.product": {
@@ -3234,6 +4134,26 @@
               "type": "string"
             },
             "example": "name asc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -3252,7 +4172,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "product.product"
+        "x-odoo-model": "product.product",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Product",
@@ -3305,7 +4233,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "product.product"
+        "x-odoo-model": "product.product",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/product.template": {
@@ -3359,6 +4295,26 @@
               "type": "string"
             },
             "example": "name asc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -3377,7 +4333,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "product.template"
+        "x-odoo-model": "product.template",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Template",
@@ -3429,7 +4393,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "product.template"
+        "x-odoo-model": "product.template",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/project.project": {
@@ -3483,6 +4455,26 @@
               "type": "string"
             },
             "example": "name asc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -3501,7 +4493,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "project.project"
+        "x-odoo-model": "project.project",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Project",
@@ -3552,7 +4552,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "project.project"
+        "x-odoo-model": "project.project",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/project.task": {
@@ -3606,6 +4614,26 @@
               "type": "string"
             },
             "example": "sequence asc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -3624,7 +4652,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "project.task"
+        "x-odoo-model": "project.task",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Task",
@@ -3676,7 +4712,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "project.task"
+        "x-odoo-model": "project.task",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/purchase.order": {
@@ -3730,6 +4774,26 @@
               "type": "string"
             },
             "example": "date_order desc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -3748,7 +4812,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "purchase.order"
+        "x-odoo-model": "purchase.order",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Order",
@@ -3801,7 +4873,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "purchase.order"
+        "x-odoo-model": "purchase.order",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/purchase.order.line": {
@@ -3855,6 +4935,26 @@
               "type": "string"
             },
             "example": "id asc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -3873,7 +4973,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "purchase.order.line"
+        "x-odoo-model": "purchase.order.line",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Line",
@@ -3929,7 +5037,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "purchase.order.line"
+        "x-odoo-model": "purchase.order.line",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/res.partner": {
@@ -3983,6 +5099,26 @@
               "type": "string"
             },
             "example": "name asc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -4001,7 +5137,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "res.partner"
+        "x-odoo-model": "res.partner",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Partner",
@@ -4054,7 +5198,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "res.partner"
+        "x-odoo-model": "res.partner",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/res.partner.bank": {
@@ -4108,6 +5260,26 @@
               "type": "string"
             },
             "example": "id asc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -4126,7 +5298,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "res.partner.bank"
+        "x-odoo-model": "res.partner.bank",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Bank",
@@ -4178,7 +5358,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "res.partner.bank"
+        "x-odoo-model": "res.partner.bank",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/res.partner.category": {
@@ -4232,6 +5420,26 @@
               "type": "string"
             },
             "example": "name asc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -4250,7 +5458,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "res.partner.category"
+        "x-odoo-model": "res.partner.category",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Category",
@@ -4301,7 +5517,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "res.partner.category"
+        "x-odoo-model": "res.partner.category",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/sale.order": {
@@ -4355,6 +5579,26 @@
               "type": "string"
             },
             "example": "date_order desc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -4373,7 +5617,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "sale.order"
+        "x-odoo-model": "sale.order",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Order",
@@ -4426,7 +5678,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "sale.order"
+        "x-odoo-model": "sale.order",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/sale.order.line": {
@@ -4480,6 +5740,26 @@
               "type": "string"
             },
             "example": "id asc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -4498,7 +5778,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "sale.order.line"
+        "x-odoo-model": "sale.order.line",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Line",
@@ -4554,7 +5842,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "sale.order.line"
+        "x-odoo-model": "sale.order.line",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/stock.location": {
@@ -4608,6 +5904,26 @@
               "type": "string"
             },
             "example": "name asc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -4626,7 +5942,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "stock.location"
+        "x-odoo-model": "stock.location",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Location",
@@ -4679,7 +6003,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "stock.location"
+        "x-odoo-model": "stock.location",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/stock.move": {
@@ -4733,6 +6065,26 @@
               "type": "string"
             },
             "example": "create_date desc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -4751,7 +6103,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "stock.move"
+        "x-odoo-model": "stock.move",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Move",
@@ -4805,7 +6165,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "stock.move"
+        "x-odoo-model": "stock.move",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/stock.move.line": {
@@ -4859,6 +6227,26 @@
               "type": "string"
             },
             "example": "id asc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -4877,7 +6265,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "stock.move.line"
+        "x-odoo-model": "stock.move.line",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Line",
@@ -4931,7 +6327,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "stock.move.line"
+        "x-odoo-model": "stock.move.line",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/stock.picking": {
@@ -4985,6 +6389,26 @@
               "type": "string"
             },
             "example": "scheduled_date desc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -5003,7 +6427,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "stock.picking"
+        "x-odoo-model": "stock.picking",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Picking",
@@ -5056,7 +6488,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "stock.picking"
+        "x-odoo-model": "stock.picking",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/stock.picking.type": {
@@ -5110,6 +6550,26 @@
               "type": "string"
             },
             "example": "name asc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -5128,7 +6588,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "stock.picking.type"
+        "x-odoo-model": "stock.picking.type",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Type",
@@ -5179,7 +6647,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "stock.picking.type"
+        "x-odoo-model": "stock.picking.type",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/stock.quant": {
@@ -5233,6 +6709,26 @@
               "type": "string"
             },
             "example": "id asc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -5251,7 +6747,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "stock.quant"
+        "x-odoo-model": "stock.quant",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Quant",
@@ -5305,7 +6809,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "stock.quant"
+        "x-odoo-model": "stock.quant",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/stock.warehouse": {
@@ -5359,6 +6871,26 @@
               "type": "string"
             },
             "example": "name asc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -5377,7 +6909,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "stock.warehouse"
+        "x-odoo-model": "stock.warehouse",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Warehouse",
@@ -5428,7 +6968,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "stock.warehouse"
+        "x-odoo-model": "stock.warehouse",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/uom.category": {
@@ -5482,6 +7030,26 @@
               "type": "string"
             },
             "example": "name asc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -5500,7 +7068,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "uom.category"
+        "x-odoo-model": "uom.category",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Category",
@@ -5551,7 +7127,15 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "uom.category"
+        "x-odoo-model": "uom.category",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       }
     },
     "/api/uom.uom": {
@@ -5605,6 +7189,26 @@
               "type": "string"
             },
             "example": "name asc"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
           }
         ],
         "responses": {
@@ -5623,7 +7227,15 @@
           }
         },
         "x-odoo-method": "search_read",
-        "x-odoo-model": "uom.uom"
+        "x-odoo-model": "uom.uom",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
       },
       "put": {
         "summary": "Upsert Uom",
@@ -5676,7 +7288,2535 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "uom.uom"
+        "x-odoo-model": "uom.uom",
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ]
+      }
+    },
+    "/api/account.account/fields": {
+      "get": {
+        "operationId": "get_account_account_fields",
+        "summary": "Get account.account field metadata",
+        "description": "List all fields, types, and relations for account.account. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/account.journal/fields": {
+      "get": {
+        "operationId": "get_account_journal_fields",
+        "summary": "Get account.journal field metadata",
+        "description": "List all fields, types, and relations for account.journal. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/account.move/fields": {
+      "get": {
+        "operationId": "get_account_move_fields",
+        "summary": "Get account.move field metadata",
+        "description": "List all fields, types, and relations for account.move. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/account.move.line/fields": {
+      "get": {
+        "operationId": "get_account_move_line_fields",
+        "summary": "Get account.move.line field metadata",
+        "description": "List all fields, types, and relations for account.move.line. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/account.payment/fields": {
+      "get": {
+        "operationId": "get_account_payment_fields",
+        "summary": "Get account.payment field metadata",
+        "description": "List all fields, types, and relations for account.payment. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/account.tax/fields": {
+      "get": {
+        "operationId": "get_account_tax_fields",
+        "summary": "Get account.tax field metadata",
+        "description": "List all fields, types, and relations for account.tax. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/account.tax.group/fields": {
+      "get": {
+        "operationId": "get_account_tax_group_fields",
+        "summary": "Get account.tax.group field metadata",
+        "description": "List all fields, types, and relations for account.tax.group. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/crm.lead/fields": {
+      "get": {
+        "operationId": "get_crm_lead_fields",
+        "summary": "Get crm.lead field metadata",
+        "description": "List all fields, types, and relations for crm.lead. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/crm.stage/fields": {
+      "get": {
+        "operationId": "get_crm_stage_fields",
+        "summary": "Get crm.stage field metadata",
+        "description": "List all fields, types, and relations for crm.stage. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/crm.tag/fields": {
+      "get": {
+        "operationId": "get_crm_tag_fields",
+        "summary": "Get crm.tag field metadata",
+        "description": "List all fields, types, and relations for crm.tag. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/hr.department/fields": {
+      "get": {
+        "operationId": "get_hr_department_fields",
+        "summary": "Get hr.department field metadata",
+        "description": "List all fields, types, and relations for hr.department. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/hr.employee/fields": {
+      "get": {
+        "operationId": "get_hr_employee_fields",
+        "summary": "Get hr.employee field metadata",
+        "description": "List all fields, types, and relations for hr.employee. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/hr.job/fields": {
+      "get": {
+        "operationId": "get_hr_job_fields",
+        "summary": "Get hr.job field metadata",
+        "description": "List all fields, types, and relations for hr.job. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/mail.message/fields": {
+      "get": {
+        "operationId": "get_mail_message_fields",
+        "summary": "Get mail.message field metadata",
+        "description": "List all fields, types, and relations for mail.message. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/mail.thread/fields": {
+      "get": {
+        "operationId": "get_mail_thread_fields",
+        "summary": "Get mail.thread field metadata",
+        "description": "List all fields, types, and relations for mail.thread. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/mrp.bom/fields": {
+      "get": {
+        "operationId": "get_mrp_bom_fields",
+        "summary": "Get mrp.bom field metadata",
+        "description": "List all fields, types, and relations for mrp.bom. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/mrp.production/fields": {
+      "get": {
+        "operationId": "get_mrp_production_fields",
+        "summary": "Get mrp.production field metadata",
+        "description": "List all fields, types, and relations for mrp.production. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/mrp.workorder/fields": {
+      "get": {
+        "operationId": "get_mrp_workorder_fields",
+        "summary": "Get mrp.workorder field metadata",
+        "description": "List all fields, types, and relations for mrp.workorder. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/pos.config/fields": {
+      "get": {
+        "operationId": "get_pos_config_fields",
+        "summary": "Get pos.config field metadata",
+        "description": "List all fields, types, and relations for pos.config. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/pos.order/fields": {
+      "get": {
+        "operationId": "get_pos_order_fields",
+        "summary": "Get pos.order field metadata",
+        "description": "List all fields, types, and relations for pos.order. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/pos.order.line/fields": {
+      "get": {
+        "operationId": "get_pos_order_line_fields",
+        "summary": "Get pos.order.line field metadata",
+        "description": "List all fields, types, and relations for pos.order.line. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/pos.session/fields": {
+      "get": {
+        "operationId": "get_pos_session_fields",
+        "summary": "Get pos.session field metadata",
+        "description": "List all fields, types, and relations for pos.session. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/product.attribute/fields": {
+      "get": {
+        "operationId": "get_product_attribute_fields",
+        "summary": "Get product.attribute field metadata",
+        "description": "List all fields, types, and relations for product.attribute. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/product.attribute.value/fields": {
+      "get": {
+        "operationId": "get_product_attribute_value_fields",
+        "summary": "Get product.attribute.value field metadata",
+        "description": "List all fields, types, and relations for product.attribute.value. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/product.category/fields": {
+      "get": {
+        "operationId": "get_product_category_fields",
+        "summary": "Get product.category field metadata",
+        "description": "List all fields, types, and relations for product.category. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/product.product/fields": {
+      "get": {
+        "operationId": "get_product_product_fields",
+        "summary": "Get product.product field metadata",
+        "description": "List all fields, types, and relations for product.product. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/product.template/fields": {
+      "get": {
+        "operationId": "get_product_template_fields",
+        "summary": "Get product.template field metadata",
+        "description": "List all fields, types, and relations for product.template. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/project.project/fields": {
+      "get": {
+        "operationId": "get_project_project_fields",
+        "summary": "Get project.project field metadata",
+        "description": "List all fields, types, and relations for project.project. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/project.task/fields": {
+      "get": {
+        "operationId": "get_project_task_fields",
+        "summary": "Get project.task field metadata",
+        "description": "List all fields, types, and relations for project.task. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/purchase.order/fields": {
+      "get": {
+        "operationId": "get_purchase_order_fields",
+        "summary": "Get purchase.order field metadata",
+        "description": "List all fields, types, and relations for purchase.order. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/purchase.order.line/fields": {
+      "get": {
+        "operationId": "get_purchase_order_line_fields",
+        "summary": "Get purchase.order.line field metadata",
+        "description": "List all fields, types, and relations for purchase.order.line. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/res.partner/fields": {
+      "get": {
+        "operationId": "get_res_partner_fields",
+        "summary": "Get res.partner field metadata",
+        "description": "List all fields, types, and relations for res.partner. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/res.partner.bank/fields": {
+      "get": {
+        "operationId": "get_res_partner_bank_fields",
+        "summary": "Get res.partner.bank field metadata",
+        "description": "List all fields, types, and relations for res.partner.bank. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/res.partner.category/fields": {
+      "get": {
+        "operationId": "get_res_partner_category_fields",
+        "summary": "Get res.partner.category field metadata",
+        "description": "List all fields, types, and relations for res.partner.category. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/sale.order/fields": {
+      "get": {
+        "operationId": "get_sale_order_fields",
+        "summary": "Get sale.order field metadata",
+        "description": "List all fields, types, and relations for sale.order. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/sale.order.line/fields": {
+      "get": {
+        "operationId": "get_sale_order_line_fields",
+        "summary": "Get sale.order.line field metadata",
+        "description": "List all fields, types, and relations for sale.order.line. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/stock.location/fields": {
+      "get": {
+        "operationId": "get_stock_location_fields",
+        "summary": "Get stock.location field metadata",
+        "description": "List all fields, types, and relations for stock.location. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/stock.move/fields": {
+      "get": {
+        "operationId": "get_stock_move_fields",
+        "summary": "Get stock.move field metadata",
+        "description": "List all fields, types, and relations for stock.move. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/stock.move.line/fields": {
+      "get": {
+        "operationId": "get_stock_move_line_fields",
+        "summary": "Get stock.move.line field metadata",
+        "description": "List all fields, types, and relations for stock.move.line. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/stock.picking/fields": {
+      "get": {
+        "operationId": "get_stock_picking_fields",
+        "summary": "Get stock.picking field metadata",
+        "description": "List all fields, types, and relations for stock.picking. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/stock.picking.type/fields": {
+      "get": {
+        "operationId": "get_stock_picking_type_fields",
+        "summary": "Get stock.picking.type field metadata",
+        "description": "List all fields, types, and relations for stock.picking.type. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/stock.quant/fields": {
+      "get": {
+        "operationId": "get_stock_quant_fields",
+        "summary": "Get stock.quant field metadata",
+        "description": "List all fields, types, and relations for stock.quant. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/stock.warehouse/fields": {
+      "get": {
+        "operationId": "get_stock_warehouse_fields",
+        "summary": "Get stock.warehouse field metadata",
+        "description": "List all fields, types, and relations for stock.warehouse. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/uom.category/fields": {
+      "get": {
+        "operationId": "get_uom_category_fields",
+        "summary": "Get uom.category field metadata",
+        "description": "List all fields, types, and relations for uom.category. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/uom.uom/fields": {
+      "get": {
+        "operationId": "get_uom_uom_fields",
+        "summary": "Get uom.uom field metadata",
+        "description": "List all fields, types, and relations for uom.uom. Use this to understand which fields accept names vs IDs.",
+        "tags": [
+          "Fields"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          },
+          {
+            "basicAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Exact match on name field",
+            "example": "John Doe"
+          },
+          {
+            "name": "name_like",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search name (case-insensitive partial match)",
+            "example": "john"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Field metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Field name \u2192 {type, label, required, relation}"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
       }
     }
   },
