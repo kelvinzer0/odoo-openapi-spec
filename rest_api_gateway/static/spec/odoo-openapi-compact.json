@@ -91,7 +91,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -100,7 +101,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,code,id"
+            "example": "name,code,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -108,7 +110,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -116,7 +119,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -125,7 +129,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "code asc"
+            "example": "code asc",
+            "required": false
           }
         ],
         "responses": {
@@ -238,7 +243,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -247,7 +253,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,code,type,id"
+            "example": "name,code,type,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -255,7 +262,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -263,7 +271,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -272,7 +281,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name asc"
+            "example": "name asc",
+            "required": false
           }
         ],
         "responses": {
@@ -385,7 +395,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -394,7 +405,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,partner_id,state,amount_total,id"
+            "example": "name,partner_id,state,amount_total,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -402,7 +414,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -410,7 +423,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -419,7 +433,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "date desc"
+            "example": "date desc",
+            "required": false
           }
         ],
         "responses": {
@@ -532,7 +547,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -541,7 +557,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,account_id,debit,credit,id"
+            "example": "name,account_id,debit,credit,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -549,7 +566,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -557,7 +575,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -566,7 +585,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "id asc"
+            "example": "id asc",
+            "required": false
           }
         ],
         "responses": {
@@ -680,7 +700,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -689,7 +710,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,state,amount,id"
+            "example": "name,state,amount,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -697,7 +719,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -705,7 +728,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -714,7 +738,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "date desc"
+            "example": "date desc",
+            "required": false
           }
         ],
         "responses": {
@@ -829,7 +854,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -838,7 +864,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,amount,type,id"
+            "example": "name,amount,type,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -846,7 +873,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -854,7 +882,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -863,7 +892,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name asc"
+            "example": "name asc",
+            "required": false
           }
         ],
         "responses": {
@@ -976,7 +1006,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -985,7 +1016,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,id"
+            "example": "name,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -993,7 +1025,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -1001,7 +1034,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -1010,7 +1044,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name asc"
+            "example": "name asc",
+            "required": false
           }
         ],
         "responses": {
@@ -1121,7 +1156,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -1130,7 +1166,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,partner_id,stage_id,id"
+            "example": "name,partner_id,stage_id,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -1138,7 +1175,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -1146,7 +1184,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -1155,7 +1194,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "create_date desc"
+            "example": "create_date desc",
+            "required": false
           }
         ],
         "responses": {
@@ -1267,7 +1307,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -1276,7 +1317,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,sequence,id"
+            "example": "name,sequence,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -1284,7 +1326,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -1292,7 +1335,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -1301,7 +1345,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "sequence asc"
+            "example": "sequence asc",
+            "required": false
           }
         ],
         "responses": {
@@ -1413,7 +1458,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -1422,7 +1468,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,id"
+            "example": "name,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -1430,7 +1477,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -1438,7 +1486,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -1447,7 +1496,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name asc"
+            "example": "name asc",
+            "required": false
           }
         ],
         "responses": {
@@ -1558,7 +1608,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -1567,7 +1618,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,manager_id,id"
+            "example": "name,manager_id,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -1575,7 +1627,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -1583,7 +1636,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -1592,7 +1646,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name asc"
+            "example": "name asc",
+            "required": false
           }
         ],
         "responses": {
@@ -1703,7 +1758,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -1712,7 +1768,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,work_email,department_id,id"
+            "example": "name,work_email,department_id,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -1720,7 +1777,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -1728,7 +1786,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -1737,7 +1796,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name asc"
+            "example": "name asc",
+            "required": false
           }
         ],
         "responses": {
@@ -1849,7 +1909,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -1858,7 +1919,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,department_id,id"
+            "example": "name,department_id,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -1866,7 +1928,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -1874,7 +1937,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -1883,7 +1947,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name asc"
+            "example": "name asc",
+            "required": false
           }
         ],
         "responses": {
@@ -1994,7 +2059,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -2003,7 +2069,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "subject,model,body,id"
+            "example": "subject,model,body,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -2011,7 +2078,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -2019,7 +2087,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -2028,7 +2097,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "date desc"
+            "example": "date desc",
+            "required": false
           }
         ],
         "responses": {
@@ -2143,7 +2213,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -2152,7 +2223,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "id"
+            "example": "id",
+            "required": false
           },
           {
             "name": "limit",
@@ -2160,7 +2232,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -2168,7 +2241,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -2177,7 +2251,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "id asc"
+            "example": "id asc",
+            "required": false
           }
         ],
         "responses": {
@@ -2289,7 +2364,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -2298,7 +2374,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "code,product_tmpl_id,product_qty,id"
+            "example": "code,product_tmpl_id,product_qty,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -2306,7 +2383,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -2314,7 +2392,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -2323,7 +2402,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "code asc"
+            "example": "code asc",
+            "required": false
           }
         ],
         "responses": {
@@ -2436,7 +2516,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -2445,7 +2526,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,state,product_id,product_qty,id"
+            "example": "name,state,product_id,product_qty,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -2453,7 +2535,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -2461,7 +2544,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -2470,7 +2554,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "date_start desc"
+            "example": "date_start desc",
+            "required": false
           }
         ],
         "responses": {
@@ -2584,7 +2669,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -2593,7 +2679,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,state,production_id,id"
+            "example": "name,state,production_id,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -2601,7 +2688,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -2609,7 +2697,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -2618,7 +2707,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "id asc"
+            "example": "id asc",
+            "required": false
           }
         ],
         "responses": {
@@ -2731,7 +2821,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -2740,7 +2831,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,module_pos_restaurant,id"
+            "example": "name,module_pos_restaurant,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -2748,7 +2840,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -2756,7 +2849,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -2765,7 +2859,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name asc"
+            "example": "name asc",
+            "required": false
           }
         ],
         "responses": {
@@ -2876,7 +2971,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -2885,7 +2981,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,state,partner_id,amount_total,id"
+            "example": "name,state,partner_id,amount_total,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -2893,7 +2990,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -2901,7 +2999,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -2910,7 +3009,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "date_order desc"
+            "example": "date_order desc",
+            "required": false
           }
         ],
         "responses": {
@@ -3023,7 +3123,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -3032,7 +3133,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,order_id,product_id,qty,price_unit,id"
+            "example": "name,order_id,product_id,qty,price_unit,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -3040,7 +3142,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -3048,7 +3151,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -3057,7 +3161,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "id asc"
+            "example": "id asc",
+            "required": false
           }
         ],
         "responses": {
@@ -3172,7 +3277,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -3181,7 +3287,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,state,config_id,id"
+            "example": "name,state,config_id,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -3189,7 +3296,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -3197,7 +3305,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -3206,7 +3315,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "start_at desc"
+            "example": "start_at desc",
+            "required": false
           }
         ],
         "responses": {
@@ -3319,7 +3429,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -3328,7 +3439,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,create_variant,id"
+            "example": "name,create_variant,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -3336,7 +3448,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -3344,7 +3457,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -3353,7 +3467,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name asc"
+            "example": "name asc",
+            "required": false
           }
         ],
         "responses": {
@@ -3464,7 +3579,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -3473,7 +3589,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,attribute_id,color,id"
+            "example": "name,attribute_id,color,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -3481,7 +3598,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -3489,7 +3607,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -3498,7 +3617,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "sequence asc"
+            "example": "sequence asc",
+            "required": false
           }
         ],
         "responses": {
@@ -3610,7 +3730,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -3619,7 +3740,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,parent_id,id"
+            "example": "name,parent_id,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -3627,7 +3749,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -3635,7 +3758,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -3644,7 +3768,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name asc"
+            "example": "name asc",
+            "required": false
           }
         ],
         "responses": {
@@ -3755,7 +3880,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -3764,7 +3890,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,barcode,list_price,id"
+            "example": "name,default_code,barcode,list_price,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -3772,7 +3899,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -3780,7 +3908,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -3789,7 +3918,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name asc"
+            "example": "name asc",
+            "required": false
           }
         ],
         "responses": {
@@ -3902,7 +4032,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -3911,7 +4042,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,default_code,barcode,list_price,id"
+            "example": "name,default_code,barcode,list_price,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -3919,7 +4051,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -3927,7 +4060,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -3936,7 +4070,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name asc"
+            "example": "name asc",
+            "required": false
           }
         ],
         "responses": {
@@ -4048,7 +4183,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -4057,7 +4193,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,stage_id,user_id,id"
+            "example": "name,stage_id,user_id,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -4065,7 +4202,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -4073,7 +4211,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -4082,7 +4221,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name asc"
+            "example": "name asc",
+            "required": false
           }
         ],
         "responses": {
@@ -4193,7 +4333,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -4202,7 +4343,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,project_id,stage_id,user_id,id"
+            "example": "name,project_id,stage_id,user_id,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -4210,7 +4352,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -4218,7 +4361,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -4227,7 +4371,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "sequence asc"
+            "example": "sequence asc",
+            "required": false
           }
         ],
         "responses": {
@@ -4339,7 +4484,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -4348,7 +4494,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,partner_id,state,amount_total,id"
+            "example": "name,partner_id,state,amount_total,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -4356,7 +4503,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -4364,7 +4512,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -4373,7 +4522,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "date_order desc"
+            "example": "date_order desc",
+            "required": false
           }
         ],
         "responses": {
@@ -4486,7 +4636,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -4495,7 +4646,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,order_id,product_id,price_unit,product_qty,id"
+            "example": "name,order_id,product_id,price_unit,product_qty,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -4503,7 +4655,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -4511,7 +4664,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -4520,7 +4674,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "id asc"
+            "example": "id asc",
+            "required": false
           }
         ],
         "responses": {
@@ -4636,7 +4791,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -4645,7 +4801,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,email,phone,category_id,id"
+            "example": "name,email,phone,category_id,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -4653,7 +4810,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -4661,7 +4819,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -4670,7 +4829,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name asc"
+            "example": "name asc",
+            "required": false
           }
         ],
         "responses": {
@@ -4783,7 +4943,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -4792,7 +4953,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "acc_number,partner_id,bank_name,id"
+            "example": "acc_number,partner_id,bank_name,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -4800,7 +4962,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -4808,7 +4971,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -4817,7 +4981,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "id asc"
+            "example": "id asc",
+            "required": false
           }
         ],
         "responses": {
@@ -4929,7 +5094,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -4938,7 +5104,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,color,id"
+            "example": "name,color,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -4946,7 +5113,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -4954,7 +5122,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -4963,7 +5132,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name asc"
+            "example": "name asc",
+            "required": false
           }
         ],
         "responses": {
@@ -5074,7 +5244,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -5083,7 +5254,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,partner_id,state,amount_total,id"
+            "example": "name,partner_id,state,amount_total,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -5091,7 +5263,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -5099,7 +5272,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -5108,7 +5282,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "date_order desc"
+            "example": "date_order desc",
+            "required": false
           }
         ],
         "responses": {
@@ -5221,7 +5396,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -5230,7 +5406,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,order_id,product_id,price_unit,product_uom_qty,id"
+            "example": "name,order_id,product_id,price_unit,product_uom_qty,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -5238,7 +5415,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -5246,7 +5424,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -5255,7 +5434,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "id asc"
+            "example": "id asc",
+            "required": false
           }
         ],
         "responses": {
@@ -5371,7 +5551,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -5380,7 +5561,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,complete_usage,usage,id"
+            "example": "name,complete_usage,usage,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -5388,7 +5570,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -5396,7 +5579,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -5405,7 +5589,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name asc"
+            "example": "name asc",
+            "required": false
           }
         ],
         "responses": {
@@ -5518,7 +5703,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -5527,7 +5713,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,state,product_id,product_uom_qty,id"
+            "example": "name,state,product_id,product_uom_qty,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -5535,7 +5722,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -5543,7 +5731,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -5552,7 +5741,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "create_date desc"
+            "example": "create_date desc",
+            "required": false
           }
         ],
         "responses": {
@@ -5666,7 +5856,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -5675,7 +5866,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,product_id,state,qty_done,id"
+            "example": "name,product_id,state,qty_done,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -5683,7 +5875,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -5691,7 +5884,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -5700,7 +5894,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "id asc"
+            "example": "id asc",
+            "required": false
           }
         ],
         "responses": {
@@ -5814,7 +6009,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -5823,7 +6019,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,state,partner_id,picking_type_id,id"
+            "example": "name,state,partner_id,picking_type_id,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -5831,7 +6028,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -5839,7 +6037,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -5848,7 +6047,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "scheduled_date desc"
+            "example": "scheduled_date desc",
+            "required": false
           }
         ],
         "responses": {
@@ -5961,7 +6161,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -5970,7 +6171,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,code,warehouse_id,id"
+            "example": "name,code,warehouse_id,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -5978,7 +6180,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -5986,7 +6189,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -5995,7 +6199,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name asc"
+            "example": "name asc",
+            "required": false
           }
         ],
         "responses": {
@@ -6106,7 +6311,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -6115,7 +6321,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "product_id,location_id,quantity,reserved_quantity,id"
+            "example": "product_id,location_id,quantity,reserved_quantity,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -6123,7 +6330,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -6131,7 +6339,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -6140,7 +6349,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "id asc"
+            "example": "id asc",
+            "required": false
           }
         ],
         "responses": {
@@ -6254,7 +6464,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -6263,7 +6474,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,code,company_id,id"
+            "example": "name,code,company_id,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -6271,7 +6483,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -6279,7 +6492,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -6288,7 +6502,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name asc"
+            "example": "name asc",
+            "required": false
           }
         ],
         "responses": {
@@ -6399,7 +6614,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -6408,7 +6624,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,is_current_group_of_ids,id"
+            "example": "name,is_current_group_of_ids,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -6416,7 +6633,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -6424,7 +6642,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -6433,7 +6652,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name asc"
+            "example": "name asc",
+            "required": false
           }
         ],
         "responses": {
@@ -6544,7 +6764,8 @@
                 "ilike",
                 "test"
               ]
-            ]
+            ],
+            "required": false
           },
           {
             "name": "fields",
@@ -6553,7 +6774,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name,category_id,factor,id"
+            "example": "name,category_id,factor,id",
+            "required": false
           },
           {
             "name": "limit",
@@ -6561,7 +6783,8 @@
             "schema": {
               "type": "integer",
               "default": 20
-            }
+            },
+            "required": false
           },
           {
             "name": "offset",
@@ -6569,7 +6792,8 @@
             "schema": {
               "type": "integer",
               "default": 0
-            }
+            },
+            "required": false
           },
           {
             "name": "order",
@@ -6578,7 +6802,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name asc"
+            "example": "name asc",
+            "required": false
           }
         ],
         "responses": {
@@ -9254,7 +9479,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -9371,7 +9597,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -9488,7 +9715,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -9605,7 +9833,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -9722,7 +9951,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -9839,7 +10069,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -9956,7 +10187,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -10073,7 +10305,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -10190,7 +10423,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -10307,7 +10541,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -10424,7 +10659,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -10541,7 +10777,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -10658,7 +10895,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -10775,7 +11013,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -10892,7 +11131,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -11009,7 +11249,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -11126,7 +11367,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -11243,7 +11485,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -11360,7 +11603,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -11477,7 +11721,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -11594,7 +11839,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -11711,7 +11957,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -11828,7 +12075,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -11945,7 +12193,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -12062,7 +12311,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -12179,7 +12429,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -12296,7 +12547,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -12413,7 +12665,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -12530,7 +12783,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -12647,7 +12901,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -12764,7 +13019,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -12881,7 +13137,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -12998,7 +13255,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -13115,7 +13373,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -13232,7 +13491,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -13349,7 +13609,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -13466,7 +13727,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -13583,7 +13845,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -13700,7 +13963,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -13817,7 +14081,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -13934,7 +14199,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -14051,7 +14317,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -14168,7 +14435,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -14285,7 +14553,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -14402,7 +14671,8 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "type": "object",
+                "required": []
               },
               "example": {
                 "name": "Updated Name"
@@ -39717,7 +39987,9 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "code",
+          "name"
         ]
       },
       "account_journal_upsert": {
@@ -40262,7 +40534,10 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "code",
+          "name",
+          "type"
         ]
       },
       "account_move_upsert": {
@@ -41456,7 +41731,9 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "name",
+          "move_type"
         ]
       },
       "account_move_line_upsert": {
@@ -42153,7 +42430,8 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "name"
         ]
       },
       "account_payment_upsert": {
@@ -43705,7 +43983,9 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "name",
+          "payment_type"
         ]
       },
       "account_tax_upsert": {
@@ -43917,7 +44197,10 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "name",
+          "amount_type",
+          "type_tax_use"
         ]
       },
       "account_tax_group_upsert": {
@@ -44038,7 +44321,8 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "name"
         ]
       },
       "crm_lead_upsert": {
@@ -44751,7 +45035,8 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "name"
         ]
       },
       "crm_stage_upsert": {
@@ -44816,7 +45101,8 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "name"
         ]
       },
       "crm_tag_upsert": {
@@ -44849,7 +45135,8 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "name"
         ]
       },
       "hr_department_upsert": {
@@ -45013,7 +45300,8 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "name"
         ]
       },
       "hr_employee_upsert": {
@@ -45845,7 +46133,8 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "name"
         ]
       },
       "hr_job_upsert": {
@@ -45994,7 +46283,8 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "name"
         ]
       },
       "mail_message_upsert": {
@@ -46289,7 +46579,8 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "subject"
         ]
       },
       "mail_thread_upsert": {
@@ -46590,7 +46881,8 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "product_tmpl_id"
         ]
       },
       "mrp_production_upsert": {
@@ -47244,7 +47536,9 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "product_id",
+          "product_qty"
         ]
       },
       "mrp_workorder_upsert": {
@@ -47592,7 +47886,8 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "name"
         ]
       },
       "pos_config_upsert": {
@@ -48358,7 +48653,8 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "name"
         ]
       },
       "pos_order_upsert": {
@@ -48833,7 +49129,8 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "name"
         ]
       },
       "pos_order_line_upsert": {
@@ -49125,7 +49422,8 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "name"
         ]
       },
       "pos_session_upsert": {
@@ -49487,7 +49785,8 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "name"
         ]
       },
       "product_attribute_upsert": {
@@ -49543,7 +49842,8 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "name"
         ]
       },
       "product_attribute_value_upsert": {
@@ -49629,7 +49929,9 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "name",
+          "attribute_id"
         ]
       },
       "product_category_upsert": {
@@ -49864,7 +50166,8 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "name"
         ]
       },
       "product_product_upsert": {
@@ -51099,7 +51402,8 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "name"
         ]
       },
       "product_template_upsert": {
@@ -52159,7 +52463,8 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "name"
         ]
       },
       "project_project_upsert": {
@@ -52802,7 +53107,8 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "name"
         ]
       },
       "project_task_upsert": {
@@ -53423,7 +53729,8 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "name"
         ]
       },
       "purchase_order_upsert": {
@@ -53923,7 +54230,8 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "name"
         ]
       },
       "purchase_order_line_upsert": {
@@ -54277,7 +54585,8 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "name"
         ]
       },
       "res_partner_upsert": {
@@ -55396,7 +55705,8 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "name"
         ]
       },
       "res_partner_bank_upsert": {
@@ -55670,7 +55980,8 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "acc_number"
         ]
       },
       "res_partner_category_upsert": {
@@ -55734,7 +56045,8 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "name"
         ]
       },
       "sale_order_upsert": {
@@ -56638,7 +56950,8 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "name"
         ]
       },
       "sale_order_line_upsert": {
@@ -57176,7 +57489,8 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "name"
         ]
       },
       "stock_location_upsert": {
@@ -57397,7 +57711,8 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "name"
         ]
       },
       "stock_move_upsert": {
@@ -58203,7 +58518,8 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "name"
         ]
       },
       "stock_move_line_upsert": {
@@ -58678,7 +58994,8 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "name"
         ]
       },
       "stock_picking_upsert": {
@@ -59322,7 +59639,9 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "name",
+          "picking_type_id"
         ]
       },
       "stock_picking_type_upsert": {
@@ -59667,7 +59986,8 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "name"
         ]
       },
       "stock_quant_upsert": {
@@ -60529,7 +60849,8 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "name"
         ]
       },
       "uom_category_upsert": {
@@ -60578,7 +60899,8 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "name"
         ]
       },
       "uom_uom_upsert": {
@@ -60679,7 +61001,10 @@
           }
         },
         "required": [
-          "_key"
+          "_key",
+          "name",
+          "category_id",
+          "factor"
         ]
       }
     },
