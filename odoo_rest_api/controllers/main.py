@@ -392,14 +392,37 @@ class RestApiController(http.Controller):
         offset = int(kwargs.get('offset', 0))
         order = kwargs.get('order', '')
 
+        try:
+            Model = request.env[model].sudo()
+        except Exception:
+            return error_response(f'Model "{model}" not found. Use GET /api/{model}/fields to see available models.', 404)
+
+        # Validate domain fields exist
+        try:
+            fields_get = Model.fields_get()
+            for clause in domain:
+                if isinstance(clause, (list, tuple)) and len(clause) >= 3:
+                    field_name = clause[0]
+                    if field_name not in fields_get and field_name not in ('id', 'display_name'):
+                        available = [f for f in fields_get.keys() if field_name.split('.')[0] in f][:10]
+                        hint = f'Did you mean: {", ".join(available)}' if available else f'Use GET /api/{model}/fields to see available fields'
+                        return error_response(f'Invalid field "{field_name}" on model "{model}". {hint}', 400)
+        except Exception:
+            pass
+
         kwargs_read = {'limit': limit, 'offset': offset}
         if fields_str:
-            kwargs_read['fields'] = [f.strip() for f in fields_str.split(',')]
+            field_list = [f.strip() for f in fields_str.split(',')]
+            # Validate requested fields
+            invalid = [f for f in field_list if f not in fields_get and f not in ('id', 'display_name')]
+            if invalid:
+                hint = f'Invalid fields: {", ".join(invalid)}. Use GET /api/{model}/fields to see available fields.'
+                return error_response(hint, 400)
+            kwargs_read['fields'] = field_list
         if order:
             kwargs_read['order'] = order
 
         try:
-            Model = request.env[model].sudo()
             records = Model.search_read(domain, **kwargs_read)
             return json_response({'count': len(records), 'records': records})
         except Exception as e:
