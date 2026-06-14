@@ -154,8 +154,6 @@ def _resolve_relational(model_name, data):
                 search_fields = ['name']
                 if 'complete_name' in rel_model._fields:
                     search_fields.append('complete_name')
-                if 'display_name' in rel_model._fields:
-                    search_fields.append('display_name')
                 domain = ['|'] * (len(search_fields) - 1)
                 for sf in search_fields:
                     domain.extend([(sf, '=', value)])
@@ -163,7 +161,8 @@ def _resolve_relational(model_name, data):
                 if rec:
                     resolved[fname] = rec.id
                 else:
-                    resolved[fname] = value
+                    new_rec = rel_model.create({'name': value})
+                    resolved[fname] = new_rec.id
             elif isinstance(value, dict):
                 rel_model = request.env[rel].sudo()
                 domain = [(k, '=', v) for k, v in value.items()]
@@ -210,7 +209,8 @@ def _resolve_relational(model_name, data):
                 if rec:
                     resolved[fname] = [(6, 0, [rec.id])] if ftype == 'many2many' else [rec.id]
                 else:
-                    resolved[fname] = value
+                    new_rec = rel_model.create({'name': value})
+                    resolved[fname] = [(6, 0, [new_rec.id])] if ftype == 'many2many' else [new_rec.id]
             else:
                 resolved[fname] = value
         else:
