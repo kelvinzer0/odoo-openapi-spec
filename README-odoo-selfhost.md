@@ -128,6 +128,25 @@ Account, Journal, Move, Payment, Tax, CRM (Lead, Stage, Tag), HR (Department, Em
 - **Full spec**: `http://localhost:8069/api/spec` (469 paths, all Odoo models)
 - **Compact spec**: `http://localhost:8069/api/spec/compact` (45 paths, business models)
 
+## n8n Automation
+
+Connect to [n8n](https://n8n.io) for workflow automation:
+
+```bash
+# Install Odoo node in n8n
+npm install @n8n-dev/n8n-nodes-odoo-v17
+```
+
+Configure in n8n:
+- **Base URL:** `http://localhost:8069`
+- **Authentication:** Bearer Token (generate from API Console)
+
+Example workflows:
+- Shopify orders → Odoo Sale Orders
+- CRM lead won → Auto-create Invoice
+- Daily stock report → Slack notification
+- New HR employee → Create Odoo user
+
 ## File Structure
 
 ```

@@ -65,6 +65,22 @@ If "Electronics" doesn't exist, it's created automatically.
 
 Account, Journal, Move, Payment, Tax, CRM (Lead, Stage, Tag), HR (Department, Employee, Job), MRP (BOM, Production, Workorder), POS (Config, Order, Session), Product (Attribute, Category, Product, Template), Project, Purchase, Partner, Sale, Stock (Location, Move, Picking, Quant, Warehouse), UoM
 
+## n8n Automation Integration
+
+This module works perfectly with [n8n](https://n8n.io) for workflow automation. Use the [Odoo n8n Community Node](https://www.npmjs.com/package/@n8n-dev/n8n-nodes-odoo-v17) to connect n8n to your Odoo instance.
+
+**Setup:**
+1. Install this REST API module in Odoo
+2. Generate a Bearer token from **REST API → API Console**
+3. Install the Odoo node in n8n: `npm install @n8n-dev/n8n-nodes-odoo-v17`
+4. Configure the Odoo node with your instance URL and token
+
+**Example workflows:**
+- Sync new Shopify orders → Odoo Sale Orders
+- When CRM lead is won → Create Invoice automatically
+- Daily stock report → Send to Slack/Telegram
+- New employee in HR → Auto-create Odoo user + email welcome
+
 ## Requirements
 
 - Odoo 17.0
