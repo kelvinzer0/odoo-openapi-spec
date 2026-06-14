@@ -66,6 +66,7 @@ Requirements: Odoo 17.0
     'license': 'LGPL-3',
     'price': 100.00,
     'currency': 'USD',
+    'images': ['images/main_screenshot.png'],
     'depends': ['base'],
     'data': [
         'views/credentials_template.xml',
