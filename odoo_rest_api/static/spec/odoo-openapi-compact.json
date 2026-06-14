@@ -194,94 +194,6 @@
         "x-odoo-model": "account.account"
       }
     },
-    "/api/account.account/{id}": {
-      "get": {
-        "summary": "Get Account by ID",
-        "description": "Read a single account.account record by ID. Uses Odoo `read` method.",
-        "operationId": "get_account_account",
-        "tags": [
-          "account"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "name,code,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Account record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/account_account"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "account.account"
-      },
-      "delete": {
-        "summary": "Delete Account",
-        "description": "Delete a account.account record. Uses Odoo `unlink` method.",
-        "operationId": "delete_account_account",
-        "tags": [
-          "account"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
-        "x-odoo-model": "account.account"
-      }
-    },
     "/api/account.journal": {
       "get": {
         "summary": "Search & read Journal",
@@ -404,94 +316,6 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "account.journal"
-      }
-    },
-    "/api/account.journal/{id}": {
-      "get": {
-        "summary": "Get Journal by ID",
-        "description": "Read a single account.journal record by ID. Uses Odoo `read` method.",
-        "operationId": "get_account_journal",
-        "tags": [
-          "account"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "name,code,type,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Journal record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/account_journal"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "account.journal"
-      },
-      "delete": {
-        "summary": "Delete Journal",
-        "description": "Delete a account.journal record. Uses Odoo `unlink` method.",
-        "operationId": "delete_account_journal",
-        "tags": [
-          "account"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
         "x-odoo-model": "account.journal"
       }
     },
@@ -620,94 +444,6 @@
         "x-odoo-model": "account.move"
       }
     },
-    "/api/account.move/{id}": {
-      "get": {
-        "summary": "Get Journal Entry by ID",
-        "description": "Read a single account.move record by ID. Uses Odoo `read` method.",
-        "operationId": "get_account_move",
-        "tags": [
-          "account"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "name,partner_id,state,amount_total,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Journal Entry record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/account_move"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "account.move"
-      },
-      "delete": {
-        "summary": "Delete Journal Entry",
-        "description": "Delete a account.move record. Uses Odoo `unlink` method.",
-        "operationId": "delete_account_move",
-        "tags": [
-          "account"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
-        "x-odoo-model": "account.move"
-      }
-    },
     "/api/account.move.line": {
       "get": {
         "summary": "Search & read Journal Item",
@@ -794,6 +530,9 @@
                 "$ref": "#/components/schemas/account_move_line_upsert"
               },
               "example": {
+                "_key": {
+                  "name": "INV/2024/001-1"
+                },
                 "name": "Payment line",
                 "account_id": 1,
                 "debit": 100
@@ -828,94 +567,6 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "account.move.line"
-      }
-    },
-    "/api/account.move.line/{id}": {
-      "get": {
-        "summary": "Get Journal Item by ID",
-        "description": "Read a single account.move.line record by ID. Uses Odoo `read` method.",
-        "operationId": "get_account_move_line",
-        "tags": [
-          "account"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "name,account_id,debit,credit,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Journal Item record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/account_move_line"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "account.move.line"
-      },
-      "delete": {
-        "summary": "Delete Journal Item",
-        "description": "Delete a account.move.line record. Uses Odoo `unlink` method.",
-        "operationId": "delete_account_move_line",
-        "tags": [
-          "account"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
         "x-odoo-model": "account.move.line"
       }
     },
@@ -1005,6 +656,9 @@
                 "$ref": "#/components/schemas/account_payment_upsert"
               },
               "example": {
+                "_key": {
+                  "name": "PAY/2024/001"
+                },
                 "name": "PAY/001",
                 "payment_type": "outbound",
                 "partner_id": 1,
@@ -1040,94 +694,6 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "account.payment"
-      }
-    },
-    "/api/account.payment/{id}": {
-      "get": {
-        "summary": "Get Payments by ID",
-        "description": "Read a single account.payment record by ID. Uses Odoo `read` method.",
-        "operationId": "get_account_payment",
-        "tags": [
-          "account"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "name,state,amount,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Payments record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/account_payment"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "account.payment"
-      },
-      "delete": {
-        "summary": "Delete Payments",
-        "description": "Delete a account.payment record. Uses Odoo `unlink` method.",
-        "operationId": "delete_account_payment",
-        "tags": [
-          "account"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
         "x-odoo-model": "account.payment"
       }
     },
@@ -1256,94 +822,6 @@
         "x-odoo-model": "account.tax"
       }
     },
-    "/api/account.tax/{id}": {
-      "get": {
-        "summary": "Get Tax by ID",
-        "description": "Read a single account.tax record by ID. Uses Odoo `read` method.",
-        "operationId": "get_account_tax",
-        "tags": [
-          "account"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "name,amount,type,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Tax record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/account_tax"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "account.tax"
-      },
-      "delete": {
-        "summary": "Delete Tax",
-        "description": "Delete a account.tax record. Uses Odoo `unlink` method.",
-        "operationId": "delete_account_tax",
-        "tags": [
-          "account"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
-        "x-odoo-model": "account.tax"
-      }
-    },
     "/api/account.tax.group": {
       "get": {
         "summary": "Search & read Tax Group",
@@ -1464,94 +942,6 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "account.tax.group"
-      }
-    },
-    "/api/account.tax.group/{id}": {
-      "get": {
-        "summary": "Get Tax Group by ID",
-        "description": "Read a single account.tax.group record by ID. Uses Odoo `read` method.",
-        "operationId": "get_account_tax_group",
-        "tags": [
-          "account"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "name,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Tax Group record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/account_tax_group"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "account.tax.group"
-      },
-      "delete": {
-        "summary": "Delete Tax Group",
-        "description": "Delete a account.tax.group record. Uses Odoo `unlink` method.",
-        "operationId": "delete_account_tax_group",
-        "tags": [
-          "account"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
         "x-odoo-model": "account.tax.group"
       }
     },
@@ -1679,94 +1069,6 @@
         "x-odoo-model": "crm.lead"
       }
     },
-    "/api/crm.lead/{id}": {
-      "get": {
-        "summary": "Get Lead/Opportunity by ID",
-        "description": "Read a single crm.lead record by ID. Uses Odoo `read` method.",
-        "operationId": "get_crm_lead",
-        "tags": [
-          "crm"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "name,partner_id,stage_id,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Lead/Opportunity record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/crm_lead"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "crm.lead"
-      },
-      "delete": {
-        "summary": "Delete Lead/Opportunity",
-        "description": "Delete a crm.lead record. Uses Odoo `unlink` method.",
-        "operationId": "delete_crm_lead",
-        "tags": [
-          "crm"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
-        "x-odoo-model": "crm.lead"
-      }
-    },
     "/api/crm.stage": {
       "get": {
         "summary": "Search & read CRM Stages",
@@ -1888,94 +1190,6 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "crm.stage"
-      }
-    },
-    "/api/crm.stage/{id}": {
-      "get": {
-        "summary": "Get CRM Stages by ID",
-        "description": "Read a single crm.stage record by ID. Uses Odoo `read` method.",
-        "operationId": "get_crm_stage",
-        "tags": [
-          "crm"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "name,sequence,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "CRM Stages record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/crm_stage"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "crm.stage"
-      },
-      "delete": {
-        "summary": "Delete CRM Stages",
-        "description": "Delete a crm.stage record. Uses Odoo `unlink` method.",
-        "operationId": "delete_crm_stage",
-        "tags": [
-          "crm"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
         "x-odoo-model": "crm.stage"
       }
     },
@@ -2102,94 +1316,6 @@
         "x-odoo-model": "crm.tag"
       }
     },
-    "/api/crm.tag/{id}": {
-      "get": {
-        "summary": "Get CRM Tag by ID",
-        "description": "Read a single crm.tag record by ID. Uses Odoo `read` method.",
-        "operationId": "get_crm_tag",
-        "tags": [
-          "crm"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "name,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "CRM Tag record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/crm_tag"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "crm.tag"
-      },
-      "delete": {
-        "summary": "Delete CRM Tag",
-        "description": "Delete a crm.tag record. Uses Odoo `unlink` method.",
-        "operationId": "delete_crm_tag",
-        "tags": [
-          "crm"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
-        "x-odoo-model": "crm.tag"
-      }
-    },
     "/api/hr.department": {
       "get": {
         "summary": "Search & read Department",
@@ -2310,94 +1436,6 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "hr.department"
-      }
-    },
-    "/api/hr.department/{id}": {
-      "get": {
-        "summary": "Get Department by ID",
-        "description": "Read a single hr.department record by ID. Uses Odoo `read` method.",
-        "operationId": "get_hr_department",
-        "tags": [
-          "hr"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "name,manager_id,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Department record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/hr_department"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "hr.department"
-      },
-      "delete": {
-        "summary": "Delete Department",
-        "description": "Delete a hr.department record. Uses Odoo `unlink` method.",
-        "operationId": "delete_hr_department",
-        "tags": [
-          "hr"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
         "x-odoo-model": "hr.department"
       }
     },
@@ -2525,94 +1563,6 @@
         "x-odoo-model": "hr.employee"
       }
     },
-    "/api/hr.employee/{id}": {
-      "get": {
-        "summary": "Get Employee by ID",
-        "description": "Read a single hr.employee record by ID. Uses Odoo `read` method.",
-        "operationId": "get_hr_employee",
-        "tags": [
-          "hr"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "name,work_email,department_id,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Employee record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/hr_employee"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "hr.employee"
-      },
-      "delete": {
-        "summary": "Delete Employee",
-        "description": "Delete a hr.employee record. Uses Odoo `unlink` method.",
-        "operationId": "delete_hr_employee",
-        "tags": [
-          "hr"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
-        "x-odoo-model": "hr.employee"
-      }
-    },
     "/api/hr.job": {
       "get": {
         "summary": "Search & read Job Position",
@@ -2736,94 +1686,6 @@
         "x-odoo-model": "hr.job"
       }
     },
-    "/api/hr.job/{id}": {
-      "get": {
-        "summary": "Get Job Position by ID",
-        "description": "Read a single hr.job record by ID. Uses Odoo `read` method.",
-        "operationId": "get_hr_job",
-        "tags": [
-          "hr"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "name,department_id,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Job Position record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/hr_job"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "hr.job"
-      },
-      "delete": {
-        "summary": "Delete Job Position",
-        "description": "Delete a hr.job record. Uses Odoo `unlink` method.",
-        "operationId": "delete_hr_job",
-        "tags": [
-          "hr"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
-        "x-odoo-model": "hr.job"
-      }
-    },
     "/api/mail.message": {
       "get": {
         "summary": "Search & read Message",
@@ -2910,6 +1772,9 @@
                 "$ref": "#/components/schemas/mail_message_upsert"
               },
               "example": {
+                "_key": {
+                  "subject": "Hello"
+                },
                 "subject": "Hello",
                 "body": "<p>Test</p>",
                 "model": "res.partner",
@@ -2945,94 +1810,6 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "mail.message"
-      }
-    },
-    "/api/mail.message/{id}": {
-      "get": {
-        "summary": "Get Message by ID",
-        "description": "Read a single mail.message record by ID. Uses Odoo `read` method.",
-        "operationId": "get_mail_message",
-        "tags": [
-          "mail"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "subject,model,body,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Message record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/mail_message"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "mail.message"
-      },
-      "delete": {
-        "summary": "Delete Message",
-        "description": "Delete a mail.message record. Uses Odoo `unlink` method.",
-        "operationId": "delete_mail_message",
-        "tags": [
-          "mail"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
         "x-odoo-model": "mail.message"
       }
     },
@@ -3122,6 +1899,9 @@
                 "$ref": "#/components/schemas/mail_thread_upsert"
               },
               "example": {
+                "_key": {
+                  "id": 1
+                },
                 "id": 1
               }
             }
@@ -3154,94 +1934,6 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "mail.thread"
-      }
-    },
-    "/api/mail.thread/{id}": {
-      "get": {
-        "summary": "Get Email Thread by ID",
-        "description": "Read a single mail.thread record by ID. Uses Odoo `read` method.",
-        "operationId": "get_mail_thread",
-        "tags": [
-          "mail"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Email Thread record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/mail_thread"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "mail.thread"
-      },
-      "delete": {
-        "summary": "Delete Email Thread",
-        "description": "Delete a mail.thread record. Uses Odoo `unlink` method.",
-        "operationId": "delete_mail_thread",
-        "tags": [
-          "mail"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
         "x-odoo-model": "mail.thread"
       }
     },
@@ -3370,94 +2062,6 @@
         "x-odoo-model": "mrp.bom"
       }
     },
-    "/api/mrp.bom/{id}": {
-      "get": {
-        "summary": "Get Bill of Material by ID",
-        "description": "Read a single mrp.bom record by ID. Uses Odoo `read` method.",
-        "operationId": "get_mrp_bom",
-        "tags": [
-          "mrp"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "code,product_tmpl_id,product_qty,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Bill of Material record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/mrp_bom"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "mrp.bom"
-      },
-      "delete": {
-        "summary": "Delete Bill of Material",
-        "description": "Delete a mrp.bom record. Uses Odoo `unlink` method.",
-        "operationId": "delete_mrp_bom",
-        "tags": [
-          "mrp"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
-        "x-odoo-model": "mrp.bom"
-      }
-    },
     "/api/mrp.production": {
       "get": {
         "summary": "Search & read Production Order",
@@ -3544,6 +2148,9 @@
                 "$ref": "#/components/schemas/mrp_production_upsert"
               },
               "example": {
+                "_key": {
+                  "name": "MO/2024/001"
+                },
                 "name": "MO/001",
                 "product_id": 1,
                 "product_qty": 10
@@ -3578,94 +2185,6 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "mrp.production"
-      }
-    },
-    "/api/mrp.production/{id}": {
-      "get": {
-        "summary": "Get Production Order by ID",
-        "description": "Read a single mrp.production record by ID. Uses Odoo `read` method.",
-        "operationId": "get_mrp_production",
-        "tags": [
-          "mrp"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "name,state,product_id,product_qty,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Production Order record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/mrp_production"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "mrp.production"
-      },
-      "delete": {
-        "summary": "Delete Production Order",
-        "description": "Delete a mrp.production record. Uses Odoo `unlink` method.",
-        "operationId": "delete_mrp_production",
-        "tags": [
-          "mrp"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
         "x-odoo-model": "mrp.production"
       }
     },
@@ -3755,6 +2274,9 @@
                 "$ref": "#/components/schemas/mrp_workorder_upsert"
               },
               "example": {
+                "_key": {
+                  "name": "WO/2024/001"
+                },
                 "name": "WO/001",
                 "production_id": 1
               }
@@ -3788,94 +2310,6 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "mrp.workorder"
-      }
-    },
-    "/api/mrp.workorder/{id}": {
-      "get": {
-        "summary": "Get Work Order by ID",
-        "description": "Read a single mrp.workorder record by ID. Uses Odoo `read` method.",
-        "operationId": "get_mrp_workorder",
-        "tags": [
-          "mrp"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "name,state,production_id,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Work Order record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/mrp_workorder"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "mrp.workorder"
-      },
-      "delete": {
-        "summary": "Delete Work Order",
-        "description": "Delete a mrp.workorder record. Uses Odoo `unlink` method.",
-        "operationId": "delete_mrp_workorder",
-        "tags": [
-          "mrp"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
         "x-odoo-model": "mrp.workorder"
       }
     },
@@ -4002,94 +2436,6 @@
         "x-odoo-model": "pos.config"
       }
     },
-    "/api/pos.config/{id}": {
-      "get": {
-        "summary": "Get Point of Sale Configuration by ID",
-        "description": "Read a single pos.config record by ID. Uses Odoo `read` method.",
-        "operationId": "get_pos_config",
-        "tags": [
-          "pos"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "name,module_pos_restaurant,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Point of Sale Configuration record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/pos_config"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "pos.config"
-      },
-      "delete": {
-        "summary": "Delete Point of Sale Configuration",
-        "description": "Delete a pos.config record. Uses Odoo `unlink` method.",
-        "operationId": "delete_pos_config",
-        "tags": [
-          "pos"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
-        "x-odoo-model": "pos.config"
-      }
-    },
     "/api/pos.order": {
       "get": {
         "summary": "Search & read Point of Sale Orders",
@@ -4176,6 +2522,9 @@
                 "$ref": "#/components/schemas/pos_order_upsert"
               },
               "example": {
+                "_key": {
+                  "name": "Order/001"
+                },
                 "name": "Order/001",
                 "partner_id": 1
               }
@@ -4209,94 +2558,6 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "pos.order"
-      }
-    },
-    "/api/pos.order/{id}": {
-      "get": {
-        "summary": "Get Point of Sale Orders by ID",
-        "description": "Read a single pos.order record by ID. Uses Odoo `read` method.",
-        "operationId": "get_pos_order",
-        "tags": [
-          "pos"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "name,state,partner_id,amount_total,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Point of Sale Orders record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/pos_order"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "pos.order"
-      },
-      "delete": {
-        "summary": "Delete Point of Sale Orders",
-        "description": "Delete a pos.order record. Uses Odoo `unlink` method.",
-        "operationId": "delete_pos_order",
-        "tags": [
-          "pos"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
         "x-odoo-model": "pos.order"
       }
     },
@@ -4386,6 +2647,9 @@
                 "$ref": "#/components/schemas/pos_order_line_upsert"
               },
               "example": {
+                "_key": {
+                  "name": "Line 1"
+                },
                 "name": "Line 1",
                 "order_id": 1,
                 "product_id": 1,
@@ -4421,94 +2685,6 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "pos.order.line"
-      }
-    },
-    "/api/pos.order.line/{id}": {
-      "get": {
-        "summary": "Get Point of Sale Order Lines by ID",
-        "description": "Read a single pos.order.line record by ID. Uses Odoo `read` method.",
-        "operationId": "get_pos_order_line",
-        "tags": [
-          "pos"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "name,order_id,product_id,qty,price_unit,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Point of Sale Order Lines record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/pos_order_line"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "pos.order.line"
-      },
-      "delete": {
-        "summary": "Delete Point of Sale Order Lines",
-        "description": "Delete a pos.order.line record. Uses Odoo `unlink` method.",
-        "operationId": "delete_pos_order_line",
-        "tags": [
-          "pos"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
         "x-odoo-model": "pos.order.line"
       }
     },
@@ -4598,6 +2774,9 @@
                 "$ref": "#/components/schemas/pos_session_upsert"
               },
               "example": {
+                "_key": {
+                  "name": "Session/001"
+                },
                 "name": "Session/001",
                 "config_id": 1
               }
@@ -4631,94 +2810,6 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "pos.session"
-      }
-    },
-    "/api/pos.session/{id}": {
-      "get": {
-        "summary": "Get Point of Sale Session by ID",
-        "description": "Read a single pos.session record by ID. Uses Odoo `read` method.",
-        "operationId": "get_pos_session",
-        "tags": [
-          "pos"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "name,state,config_id,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Point of Sale Session record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/pos_session"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "pos.session"
-      },
-      "delete": {
-        "summary": "Delete Point of Sale Session",
-        "description": "Delete a pos.session record. Uses Odoo `unlink` method.",
-        "operationId": "delete_pos_session",
-        "tags": [
-          "pos"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
         "x-odoo-model": "pos.session"
       }
     },
@@ -4842,94 +2933,6 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "product.attribute"
-      }
-    },
-    "/api/product.attribute/{id}": {
-      "get": {
-        "summary": "Get Product Attribute by ID",
-        "description": "Read a single product.attribute record by ID. Uses Odoo `read` method.",
-        "operationId": "get_product_attribute",
-        "tags": [
-          "product"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "name,create_variant,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Product Attribute record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/product_attribute"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "product.attribute"
-      },
-      "delete": {
-        "summary": "Delete Product Attribute",
-        "description": "Delete a product.attribute record. Uses Odoo `unlink` method.",
-        "operationId": "delete_product_attribute",
-        "tags": [
-          "product"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
         "x-odoo-model": "product.attribute"
       }
     },
@@ -5057,94 +3060,6 @@
         "x-odoo-model": "product.attribute.value"
       }
     },
-    "/api/product.attribute.value/{id}": {
-      "get": {
-        "summary": "Get Attribute Value by ID",
-        "description": "Read a single product.attribute.value record by ID. Uses Odoo `read` method.",
-        "operationId": "get_product_attribute_value",
-        "tags": [
-          "product"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "name,attribute_id,color,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Attribute Value record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/product_attribute_value"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "product.attribute.value"
-      },
-      "delete": {
-        "summary": "Delete Attribute Value",
-        "description": "Delete a product.attribute.value record. Uses Odoo `unlink` method.",
-        "operationId": "delete_product_attribute_value",
-        "tags": [
-          "product"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
-        "x-odoo-model": "product.attribute.value"
-      }
-    },
     "/api/product.category": {
       "get": {
         "summary": "Search & read Product Category",
@@ -5265,94 +3180,6 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "product.category"
-      }
-    },
-    "/api/product.category/{id}": {
-      "get": {
-        "summary": "Get Product Category by ID",
-        "description": "Read a single product.category record by ID. Uses Odoo `read` method.",
-        "operationId": "get_product_category",
-        "tags": [
-          "product"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "name,parent_id,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Product Category record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/product_category"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "product.category"
-      },
-      "delete": {
-        "summary": "Delete Product Category",
-        "description": "Delete a product.category record. Uses Odoo `unlink` method.",
-        "operationId": "delete_product_category",
-        "tags": [
-          "product"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
         "x-odoo-model": "product.category"
       }
     },
@@ -5481,94 +3308,6 @@
         "x-odoo-model": "product.product"
       }
     },
-    "/api/product.product/{id}": {
-      "get": {
-        "summary": "Get Product Variant by ID",
-        "description": "Read a single product.product record by ID. Uses Odoo `read` method.",
-        "operationId": "get_product_product",
-        "tags": [
-          "product"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "name,default_code,barcode,list_price,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Product Variant record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/product_product"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "product.product"
-      },
-      "delete": {
-        "summary": "Delete Product Variant",
-        "description": "Delete a product.product record. Uses Odoo `unlink` method.",
-        "operationId": "delete_product_product",
-        "tags": [
-          "product"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
-        "x-odoo-model": "product.product"
-      }
-    },
     "/api/product.template": {
       "get": {
         "summary": "Search & read Product",
@@ -5693,94 +3432,6 @@
         "x-odoo-model": "product.template"
       }
     },
-    "/api/product.template/{id}": {
-      "get": {
-        "summary": "Get Product by ID",
-        "description": "Read a single product.template record by ID. Uses Odoo `read` method.",
-        "operationId": "get_product_template",
-        "tags": [
-          "product"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "name,default_code,barcode,list_price,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Product record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/product_template"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "product.template"
-      },
-      "delete": {
-        "summary": "Delete Product",
-        "description": "Delete a product.template record. Uses Odoo `unlink` method.",
-        "operationId": "delete_product_template",
-        "tags": [
-          "product"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
-        "x-odoo-model": "product.template"
-      }
-    },
     "/api/project.project": {
       "get": {
         "summary": "Search & read Project",
@@ -5901,94 +3552,6 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "project.project"
-      }
-    },
-    "/api/project.project/{id}": {
-      "get": {
-        "summary": "Get Project by ID",
-        "description": "Read a single project.project record by ID. Uses Odoo `read` method.",
-        "operationId": "get_project_project",
-        "tags": [
-          "project"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "name,stage_id,user_id,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Project record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/project_project"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "project.project"
-      },
-      "delete": {
-        "summary": "Delete Project",
-        "description": "Delete a project.project record. Uses Odoo `unlink` method.",
-        "operationId": "delete_project_project",
-        "tags": [
-          "project"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
         "x-odoo-model": "project.project"
       }
     },
@@ -6116,94 +3679,6 @@
         "x-odoo-model": "project.task"
       }
     },
-    "/api/project.task/{id}": {
-      "get": {
-        "summary": "Get Task by ID",
-        "description": "Read a single project.task record by ID. Uses Odoo `read` method.",
-        "operationId": "get_project_task",
-        "tags": [
-          "project"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "name,project_id,stage_id,user_id,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Task record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/project_task"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "project.task"
-      },
-      "delete": {
-        "summary": "Delete Task",
-        "description": "Delete a project.task record. Uses Odoo `unlink` method.",
-        "operationId": "delete_project_task",
-        "tags": [
-          "project"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
-        "x-odoo-model": "project.task"
-      }
-    },
     "/api/purchase.order": {
       "get": {
         "summary": "Search & read Purchase Order",
@@ -6290,6 +3765,9 @@
                 "$ref": "#/components/schemas/purchase_order_upsert"
               },
               "example": {
+                "_key": {
+                  "name": "PO/2024/001"
+                },
                 "name": "PO/001",
                 "partner_id": 1
               }
@@ -6323,94 +3801,6 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "purchase.order"
-      }
-    },
-    "/api/purchase.order/{id}": {
-      "get": {
-        "summary": "Get Purchase Order by ID",
-        "description": "Read a single purchase.order record by ID. Uses Odoo `read` method.",
-        "operationId": "get_purchase_order",
-        "tags": [
-          "purchase"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "name,partner_id,state,amount_total,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Purchase Order record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/purchase_order"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "purchase.order"
-      },
-      "delete": {
-        "summary": "Delete Purchase Order",
-        "description": "Delete a purchase.order record. Uses Odoo `unlink` method.",
-        "operationId": "delete_purchase_order",
-        "tags": [
-          "purchase"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
         "x-odoo-model": "purchase.order"
       }
     },
@@ -6500,6 +3890,9 @@
                 "$ref": "#/components/schemas/purchase_order_line_upsert"
               },
               "example": {
+                "_key": {
+                  "name": "PO/2024/001-1"
+                },
                 "name": "Line 1",
                 "order_id": 1,
                 "product_id": 1,
@@ -6536,94 +3929,6 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "purchase.order.line"
-      }
-    },
-    "/api/purchase.order.line/{id}": {
-      "get": {
-        "summary": "Get Purchase Order Line by ID",
-        "description": "Read a single purchase.order.line record by ID. Uses Odoo `read` method.",
-        "operationId": "get_purchase_order_line",
-        "tags": [
-          "purchase"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "name,order_id,product_id,price_unit,product_qty,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Purchase Order Line record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/purchase_order_line"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "purchase.order.line"
-      },
-      "delete": {
-        "summary": "Delete Purchase Order Line",
-        "description": "Delete a purchase.order.line record. Uses Odoo `unlink` method.",
-        "operationId": "delete_purchase_order_line",
-        "tags": [
-          "purchase"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
         "x-odoo-model": "purchase.order.line"
       }
     },
@@ -6752,94 +4057,6 @@
         "x-odoo-model": "res.partner"
       }
     },
-    "/api/res.partner/{id}": {
-      "get": {
-        "summary": "Get Contact by ID",
-        "description": "Read a single res.partner record by ID. Uses Odoo `read` method.",
-        "operationId": "get_res_partner",
-        "tags": [
-          "res"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "name,email,phone,category_id,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Contact record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/res_partner"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "res.partner"
-      },
-      "delete": {
-        "summary": "Delete Contact",
-        "description": "Delete a res.partner record. Uses Odoo `unlink` method.",
-        "operationId": "delete_res_partner",
-        "tags": [
-          "res"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
-        "x-odoo-model": "res.partner"
-      }
-    },
     "/api/res.partner.bank": {
       "get": {
         "summary": "Search & read Bank Accounts",
@@ -6961,94 +4178,6 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "res.partner.bank"
-      }
-    },
-    "/api/res.partner.bank/{id}": {
-      "get": {
-        "summary": "Get Bank Accounts by ID",
-        "description": "Read a single res.partner.bank record by ID. Uses Odoo `read` method.",
-        "operationId": "get_res_partner_bank",
-        "tags": [
-          "res"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "acc_number,partner_id,bank_name,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Bank Accounts record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/res_partner_bank"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "res.partner.bank"
-      },
-      "delete": {
-        "summary": "Delete Bank Accounts",
-        "description": "Delete a res.partner.bank record. Uses Odoo `unlink` method.",
-        "operationId": "delete_res_partner_bank",
-        "tags": [
-          "res"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
         "x-odoo-model": "res.partner.bank"
       }
     },
@@ -7175,94 +4304,6 @@
         "x-odoo-model": "res.partner.category"
       }
     },
-    "/api/res.partner.category/{id}": {
-      "get": {
-        "summary": "Get Partner Tags by ID",
-        "description": "Read a single res.partner.category record by ID. Uses Odoo `read` method.",
-        "operationId": "get_res_partner_category",
-        "tags": [
-          "res"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "name,color,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Partner Tags record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/res_partner_category"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "res.partner.category"
-      },
-      "delete": {
-        "summary": "Delete Partner Tags",
-        "description": "Delete a res.partner.category record. Uses Odoo `unlink` method.",
-        "operationId": "delete_res_partner_category",
-        "tags": [
-          "res"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
-        "x-odoo-model": "res.partner.category"
-      }
-    },
     "/api/sale.order": {
       "get": {
         "summary": "Search & read Sales Order",
@@ -7349,6 +4390,9 @@
                 "$ref": "#/components/schemas/sale_order_upsert"
               },
               "example": {
+                "_key": {
+                  "name": "S00001"
+                },
                 "name": "S00001",
                 "partner_id": 1
               }
@@ -7382,94 +4426,6 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "sale.order"
-      }
-    },
-    "/api/sale.order/{id}": {
-      "get": {
-        "summary": "Get Sales Order by ID",
-        "description": "Read a single sale.order record by ID. Uses Odoo `read` method.",
-        "operationId": "get_sale_order",
-        "tags": [
-          "sale"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "name,partner_id,state,amount_total,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Sales Order record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/sale_order"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "sale.order"
-      },
-      "delete": {
-        "summary": "Delete Sales Order",
-        "description": "Delete a sale.order record. Uses Odoo `unlink` method.",
-        "operationId": "delete_sale_order",
-        "tags": [
-          "sale"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
         "x-odoo-model": "sale.order"
       }
     },
@@ -7559,6 +4515,9 @@
                 "$ref": "#/components/schemas/sale_order_line_upsert"
               },
               "example": {
+                "_key": {
+                  "name": "S00001-1"
+                },
                 "name": "Line 1",
                 "order_id": 1,
                 "product_id": 1,
@@ -7595,94 +4554,6 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "sale.order.line"
-      }
-    },
-    "/api/sale.order.line/{id}": {
-      "get": {
-        "summary": "Get Sales Order Line by ID",
-        "description": "Read a single sale.order.line record by ID. Uses Odoo `read` method.",
-        "operationId": "get_sale_order_line",
-        "tags": [
-          "sale"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "name,order_id,product_id,price_unit,product_uom_qty,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Sales Order Line record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/sale_order_line"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "sale.order.line"
-      },
-      "delete": {
-        "summary": "Delete Sales Order Line",
-        "description": "Delete a sale.order.line record. Uses Odoo `unlink` method.",
-        "operationId": "delete_sale_order_line",
-        "tags": [
-          "sale"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
         "x-odoo-model": "sale.order.line"
       }
     },
@@ -7811,94 +4682,6 @@
         "x-odoo-model": "stock.location"
       }
     },
-    "/api/stock.location/{id}": {
-      "get": {
-        "summary": "Get Inventory Locations by ID",
-        "description": "Read a single stock.location record by ID. Uses Odoo `read` method.",
-        "operationId": "get_stock_location",
-        "tags": [
-          "stock"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "name,complete_usage,usage,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Inventory Locations record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/stock_location"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "stock.location"
-      },
-      "delete": {
-        "summary": "Delete Inventory Locations",
-        "description": "Delete a stock.location record. Uses Odoo `unlink` method.",
-        "operationId": "delete_stock_location",
-        "tags": [
-          "stock"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
-        "x-odoo-model": "stock.location"
-      }
-    },
     "/api/stock.move": {
       "get": {
         "summary": "Search & read Stock Move",
@@ -7985,6 +4768,9 @@
                 "$ref": "#/components/schemas/stock_move_upsert"
               },
               "example": {
+                "_key": {
+                  "name": "Move/2024/001"
+                },
                 "name": "Move/001",
                 "product_id": 1,
                 "product_uom_qty": 10
@@ -8019,94 +4805,6 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "stock.move"
-      }
-    },
-    "/api/stock.move/{id}": {
-      "get": {
-        "summary": "Get Stock Move by ID",
-        "description": "Read a single stock.move record by ID. Uses Odoo `read` method.",
-        "operationId": "get_stock_move",
-        "tags": [
-          "stock"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "name,state,product_id,product_uom_qty,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Stock Move record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/stock_move"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "stock.move"
-      },
-      "delete": {
-        "summary": "Delete Stock Move",
-        "description": "Delete a stock.move record. Uses Odoo `unlink` method.",
-        "operationId": "delete_stock_move",
-        "tags": [
-          "stock"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
         "x-odoo-model": "stock.move"
       }
     },
@@ -8196,6 +4894,9 @@
                 "$ref": "#/components/schemas/stock_move_line_upsert"
               },
               "example": {
+                "_key": {
+                  "name": "Move/2024/001-1"
+                },
                 "name": "Move Line 1",
                 "product_id": 1,
                 "qty_done": 5
@@ -8230,94 +4931,6 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "stock.move.line"
-      }
-    },
-    "/api/stock.move.line/{id}": {
-      "get": {
-        "summary": "Get Product Moves (Stock Move Line) by ID",
-        "description": "Read a single stock.move.line record by ID. Uses Odoo `read` method.",
-        "operationId": "get_stock_move_line",
-        "tags": [
-          "stock"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "name,product_id,state,qty_done,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Product Moves (Stock Move Line) record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/stock_move_line"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "stock.move.line"
-      },
-      "delete": {
-        "summary": "Delete Product Moves (Stock Move Line)",
-        "description": "Delete a stock.move.line record. Uses Odoo `unlink` method.",
-        "operationId": "delete_stock_move_line",
-        "tags": [
-          "stock"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
         "x-odoo-model": "stock.move.line"
       }
     },
@@ -8407,6 +5020,9 @@
                 "$ref": "#/components/schemas/stock_picking_upsert"
               },
               "example": {
+                "_key": {
+                  "name": "WH/OUT/001"
+                },
                 "name": "WH/OUT/001",
                 "picking_type_id": 1
               }
@@ -8440,94 +5056,6 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "stock.picking"
-      }
-    },
-    "/api/stock.picking/{id}": {
-      "get": {
-        "summary": "Get Transfer by ID",
-        "description": "Read a single stock.picking record by ID. Uses Odoo `read` method.",
-        "operationId": "get_stock_picking",
-        "tags": [
-          "stock"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "name,state,partner_id,picking_type_id,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Transfer record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/stock_picking"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "stock.picking"
-      },
-      "delete": {
-        "summary": "Delete Transfer",
-        "description": "Delete a stock.picking record. Uses Odoo `unlink` method.",
-        "operationId": "delete_stock_picking",
-        "tags": [
-          "stock"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
         "x-odoo-model": "stock.picking"
       }
     },
@@ -8654,94 +5182,6 @@
         "x-odoo-model": "stock.picking.type"
       }
     },
-    "/api/stock.picking.type/{id}": {
-      "get": {
-        "summary": "Get Picking Type by ID",
-        "description": "Read a single stock.picking.type record by ID. Uses Odoo `read` method.",
-        "operationId": "get_stock_picking_type",
-        "tags": [
-          "stock"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "name,code,warehouse_id,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Picking Type record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/stock_picking_type"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "stock.picking.type"
-      },
-      "delete": {
-        "summary": "Delete Picking Type",
-        "description": "Delete a stock.picking.type record. Uses Odoo `unlink` method.",
-        "operationId": "delete_stock_picking_type",
-        "tags": [
-          "stock"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
-        "x-odoo-model": "stock.picking.type"
-      }
-    },
     "/api/stock.quant": {
       "get": {
         "summary": "Search & read Quants",
@@ -8828,6 +5268,9 @@
                 "$ref": "#/components/schemas/stock_quant_upsert"
               },
               "example": {
+                "_key": {
+                  "id": 1
+                },
                 "product_id": 1,
                 "location_id": 1,
                 "quantity": 100
@@ -8862,94 +5305,6 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "stock.quant"
-      }
-    },
-    "/api/stock.quant/{id}": {
-      "get": {
-        "summary": "Get Quants by ID",
-        "description": "Read a single stock.quant record by ID. Uses Odoo `read` method.",
-        "operationId": "get_stock_quant",
-        "tags": [
-          "stock"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "product_id,location_id,quantity,reserved_quantity,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Quants record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/stock_quant"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "stock.quant"
-      },
-      "delete": {
-        "summary": "Delete Quants",
-        "description": "Delete a stock.quant record. Uses Odoo `unlink` method.",
-        "operationId": "delete_stock_quant",
-        "tags": [
-          "stock"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
         "x-odoo-model": "stock.quant"
       }
     },
@@ -9076,94 +5431,6 @@
         "x-odoo-model": "stock.warehouse"
       }
     },
-    "/api/stock.warehouse/{id}": {
-      "get": {
-        "summary": "Get Warehouse by ID",
-        "description": "Read a single stock.warehouse record by ID. Uses Odoo `read` method.",
-        "operationId": "get_stock_warehouse",
-        "tags": [
-          "stock"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "name,code,company_id,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Warehouse record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/stock_warehouse"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "stock.warehouse"
-      },
-      "delete": {
-        "summary": "Delete Warehouse",
-        "description": "Delete a stock.warehouse record. Uses Odoo `unlink` method.",
-        "operationId": "delete_stock_warehouse",
-        "tags": [
-          "stock"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
-        "x-odoo-model": "stock.warehouse"
-      }
-    },
     "/api/uom.category": {
       "get": {
         "summary": "Search & read Product UoM Categories",
@@ -9284,94 +5551,6 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "uom.category"
-      }
-    },
-    "/api/uom.category/{id}": {
-      "get": {
-        "summary": "Get Product UoM Categories by ID",
-        "description": "Read a single uom.category record by ID. Uses Odoo `read` method.",
-        "operationId": "get_uom_category",
-        "tags": [
-          "uom"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "name,is_current_group_of_ids,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Product UoM Categories record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/uom_category"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "uom.category"
-      },
-      "delete": {
-        "summary": "Delete Product UoM Categories",
-        "description": "Delete a uom.category record. Uses Odoo `unlink` method.",
-        "operationId": "delete_uom_category",
-        "tags": [
-          "uom"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
         "x-odoo-model": "uom.category"
       }
     },
@@ -9497,94 +5676,6 @@
           }
         },
         "x-odoo-method": "create_or_write",
-        "x-odoo-model": "uom.uom"
-      }
-    },
-    "/api/uom.uom/{id}": {
-      "get": {
-        "summary": "Get Product Unit of Measure by ID",
-        "description": "Read a single uom.uom record by ID. Uses Odoo `read` method.",
-        "operationId": "get_uom_uom",
-        "tags": [
-          "uom"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID"
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "description": "Comma-separated field names to return",
-            "schema": {
-              "type": "string"
-            },
-            "example": "name,category_id,factor,id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Product Unit of Measure record",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/uom_uom"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Record not found"
-          }
-        },
-        "x-odoo-method": "read",
-        "x-odoo-model": "uom.uom"
-      },
-      "delete": {
-        "summary": "Delete Product Unit of Measure",
-        "description": "Delete a uom.uom record. Uses Odoo `unlink` method.",
-        "operationId": "delete_uom_uom",
-        "tags": [
-          "uom"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Record ID to delete"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Delete successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    },
-                    "id": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-odoo-method": "unlink",
         "x-odoo-model": "uom.uom"
       }
     }
