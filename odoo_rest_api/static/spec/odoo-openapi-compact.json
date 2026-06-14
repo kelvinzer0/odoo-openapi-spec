@@ -126,26 +126,6 @@
               "type": "string"
             },
             "example": "code asc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -293,26 +273,6 @@
               "type": "string"
             },
             "example": "name asc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -460,26 +420,6 @@
               "type": "string"
             },
             "example": "date desc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -627,26 +567,6 @@
               "type": "string"
             },
             "example": "id asc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -795,26 +715,6 @@
               "type": "string"
             },
             "example": "date desc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -964,26 +864,6 @@
               "type": "string"
             },
             "example": "name asc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -1131,26 +1011,6 @@
               "type": "string"
             },
             "example": "name asc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -1296,26 +1156,6 @@
               "type": "string"
             },
             "example": "create_date desc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -1462,26 +1302,6 @@
               "type": "string"
             },
             "example": "sequence asc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -1628,26 +1448,6 @@
               "type": "string"
             },
             "example": "name asc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -1793,26 +1593,6 @@
               "type": "string"
             },
             "example": "name asc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -1958,26 +1738,6 @@
               "type": "string"
             },
             "example": "name asc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -2124,26 +1884,6 @@
               "type": "string"
             },
             "example": "name asc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -2289,26 +2029,6 @@
               "type": "string"
             },
             "example": "date desc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -2458,26 +2178,6 @@
               "type": "string"
             },
             "example": "id asc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -2624,26 +2324,6 @@
               "type": "string"
             },
             "example": "code asc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -2791,26 +2471,6 @@
               "type": "string"
             },
             "example": "date_start desc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -2959,26 +2619,6 @@
               "type": "string"
             },
             "example": "id asc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -3126,26 +2766,6 @@
               "type": "string"
             },
             "example": "name asc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -3291,26 +2911,6 @@
               "type": "string"
             },
             "example": "date_order desc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -3458,26 +3058,6 @@
               "type": "string"
             },
             "example": "id asc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -3627,26 +3207,6 @@
               "type": "string"
             },
             "example": "start_at desc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -3794,26 +3354,6 @@
               "type": "string"
             },
             "example": "name asc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -3959,26 +3499,6 @@
               "type": "string"
             },
             "example": "sequence asc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -4125,26 +3645,6 @@
               "type": "string"
             },
             "example": "name asc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -4290,26 +3790,6 @@
               "type": "string"
             },
             "example": "name asc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -4457,26 +3937,6 @@
               "type": "string"
             },
             "example": "name asc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -4623,26 +4083,6 @@
               "type": "string"
             },
             "example": "name asc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -4788,26 +4228,6 @@
               "type": "string"
             },
             "example": "sequence asc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -4954,26 +4374,6 @@
               "type": "string"
             },
             "example": "date_order desc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -5121,26 +4521,6 @@
               "type": "string"
             },
             "example": "id asc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -5291,26 +4671,6 @@
               "type": "string"
             },
             "example": "name asc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -5458,26 +4818,6 @@
               "type": "string"
             },
             "example": "id asc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -5624,26 +4964,6 @@
               "type": "string"
             },
             "example": "name asc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -5789,26 +5109,6 @@
               "type": "string"
             },
             "example": "date_order desc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -5956,26 +5256,6 @@
               "type": "string"
             },
             "example": "id asc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -6126,26 +5406,6 @@
               "type": "string"
             },
             "example": "name asc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -6293,26 +5553,6 @@
               "type": "string"
             },
             "example": "create_date desc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -6461,26 +5701,6 @@
               "type": "string"
             },
             "example": "id asc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -6629,26 +5849,6 @@
               "type": "string"
             },
             "example": "scheduled_date desc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -6796,26 +5996,6 @@
               "type": "string"
             },
             "example": "name asc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -6961,26 +6141,6 @@
               "type": "string"
             },
             "example": "id asc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -7129,26 +6289,6 @@
               "type": "string"
             },
             "example": "name asc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -7294,26 +6434,6 @@
               "type": "string"
             },
             "example": "name asc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
@@ -7459,26 +6579,6 @@
               "type": "string"
             },
             "example": "name asc"
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Exact match on name field",
-            "example": "John Doe"
-          },
-          {
-            "name": "name_like",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search name (case-insensitive partial match)",
-            "example": "john"
           }
         ],
         "responses": {
