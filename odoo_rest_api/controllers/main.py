@@ -121,6 +121,53 @@ def _authenticate_basic(encoded):
     return uid, password
 
 
+def _build_simple_domain(model_name, kwargs):
+    RESERVED = {'fields', 'limit', 'offset', 'order', 'domain'}
+    Model = request.env[model_name].sudo()
+    fields_get = Model.fields_get()
+    domain = []
+
+    for key, value in kwargs.items():
+        if key in RESERVED or not value:
+            continue
+
+        field_name = key
+        operator = '='
+
+        if key.endswith('_like'):
+            field_name = key[:-5]
+            operator = 'ilike'
+        elif key.endswith('_contains'):
+            field_name = key[:-9]
+            operator = 'ilike'
+        elif key.endswith('_not'):
+            field_name = key[:-4]
+            operator = '!='
+        elif key.endswith('_gte'):
+            field_name = key[:-4]
+            operator = '>='
+        elif key.endswith('_lte'):
+            field_name = key[:-4]
+            operator = '<='
+        elif key.endswith('_gt'):
+            field_name = key[:-3]
+            operator = '>'
+        elif key.endswith('_lt'):
+            field_name = key[:-3]
+            operator = '<'
+
+        if field_name not in fields_get:
+            continue
+
+        if ',' in value and operator not in ('ilike',):
+            vals = [v.strip() for v in value.split(',') if v.strip()]
+            domain.append((field_name, 'in', vals))
+        else:
+            domain.append((field_name, operator, value))
+
+    return domain
+
+
 def with_auth(func):
     @functools.wraps(func)
     def wrapper(*args, **kwargs):
@@ -333,7 +380,10 @@ class RestApiController(http.Controller):
     @with_auth
     def search(self, model, **kwargs):
         try:
-            domain = json.loads(kwargs.get('domain', '[]'))
+            if kwargs.get('domain'):
+                domain = json.loads(kwargs['domain'])
+            else:
+                domain = _build_simple_domain(model, kwargs)
         except json.JSONDecodeError:
             return error_response('Invalid domain JSON')
 
