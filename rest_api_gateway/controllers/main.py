@@ -276,7 +276,7 @@ class RestApiController(http.Controller):
         user = request.env.user
         name = user.name or ''
         initials = ''.join(w[0].upper() for w in name.split()[:2]) if name else '?'
-        return request.render('odoo_rest_api.credentials_page', {
+        return request.render('rest_api_gateway.credentials_page', {
             'user_email': user.email or '',
             'user_name': name,
             'user_initial': initials,

@@ -1,5 +1,5 @@
 {
-    'name': 'REST API',
+    'name': 'REST API Gateway',
     'version': '17.0.1.0.0',
     'summary': 'Expose Odoo models as REST API with Bearer token auth, upsert, and Scalar docs',
     'description': '''
