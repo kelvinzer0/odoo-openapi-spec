@@ -30731,7 +30731,10 @@
             },
             "required": [
               "code"
-            ]
+            ],
+            "example": {
+              "code": "100000"
+            }
           },
           "account_type": {
             "type": "string",
@@ -30957,7 +30960,10 @@
             },
             "required": [
               "code"
-            ]
+            ],
+            "example": {
+              "code": "BNK1"
+            }
           },
           "access_token": {
             "type": "string",
@@ -31499,7 +31505,10 @@
             },
             "required": [
               "name"
-            ]
+            ],
+            "example": {
+              "name": "INV/2024/001"
+            }
           },
           "access_token": {
             "type": "string",
@@ -32690,7 +32699,10 @@
             },
             "required": [
               "name"
-            ]
+            ],
+            "example": {
+              "name": "INV/2024/001-1"
+            }
           },
           "account_id": {
             "oneOf": [
@@ -33384,7 +33396,10 @@
             },
             "required": [
               "name"
-            ]
+            ],
+            "example": {
+              "name": "PAY/2024/001"
+            }
           },
           "access_token": {
             "type": "string",
@@ -34933,7 +34948,10 @@
             },
             "required": [
               "name"
-            ]
+            ],
+            "example": {
+              "name": "PPN 11%"
+            }
           },
           "active": {
             "type": "boolean",
@@ -35142,7 +35160,10 @@
             },
             "required": [
               "name"
-            ]
+            ],
+            "example": {
+              "name": "Tax Group"
+            }
           },
           "advance_tax_payment_account_id": {
             "oneOf": [
@@ -35260,7 +35281,10 @@
             },
             "required": [
               "name"
-            ]
+            ],
+            "example": {
+              "name": "Test Lead"
+            }
           },
           "active": {
             "type": "boolean",
@@ -35970,7 +35994,10 @@
             },
             "required": [
               "name"
-            ]
+            ],
+            "example": {
+              "name": "New"
+            }
           },
           "fold": {
             "type": "boolean",
@@ -36032,7 +36059,10 @@
             },
             "required": [
               "name"
-            ]
+            ],
+            "example": {
+              "name": "VIP"
+            }
           },
           "color": {
             "type": "integer",
@@ -36062,7 +36092,10 @@
             },
             "required": [
               "name"
-            ]
+            ],
+            "example": {
+              "name": "Engineering"
+            }
           },
           "active": {
             "type": "boolean",
@@ -36223,7 +36256,10 @@
             },
             "required": [
               "work_email"
-            ]
+            ],
+            "example": {
+              "work_email": "john@demo.com"
+            }
           },
           "active": {
             "type": "boolean",
@@ -37052,7 +37088,10 @@
             },
             "required": [
               "name"
-            ]
+            ],
+            "example": {
+              "name": "Developer"
+            }
           },
           "active": {
             "type": "boolean",
@@ -37198,7 +37237,10 @@
             },
             "required": [
               "subject"
-            ]
+            ],
+            "example": {
+              "subject": "Hello"
+            }
           },
           "attachment_ids": {
             "type": "array",
@@ -37489,7 +37531,10 @@
             },
             "required": [
               "id"
-            ]
+            ],
+            "example": {
+              "id": 1
+            }
           },
           "has_message": {
             "type": "boolean",
@@ -37550,7 +37595,10 @@
             },
             "required": [
               "code"
-            ]
+            ],
+            "example": {
+              "code": "BOM001"
+            }
           },
           "active": {
             "type": "boolean",
@@ -37785,7 +37833,10 @@
             },
             "required": [
               "name"
-            ]
+            ],
+            "example": {
+              "name": "MO/001"
+            }
           },
           "activity_calendar_event_id": {
             "oneOf": [
@@ -38436,7 +38487,10 @@
             },
             "required": [
               "name"
-            ]
+            ],
+            "example": {
+              "name": "WO/001"
+            }
           },
           "allow_workorder_dependencies": {
             "type": "boolean",
@@ -38781,7 +38835,10 @@
             },
             "required": [
               "name"
-            ]
+            ],
+            "example": {
+              "name": "Shop 1"
+            }
           },
           "access_token": {
             "type": "string",
@@ -39544,7 +39601,10 @@
             },
             "required": [
               "name"
-            ]
+            ],
+            "example": {
+              "name": "Order/001"
+            }
           },
           "access_token": {
             "type": "string",
@@ -40016,7 +40076,10 @@
             },
             "required": [
               "name"
-            ]
+            ],
+            "example": {
+              "name": "Line 1"
+            }
           },
           "attribute_value_ids": {
             "type": "array",
@@ -40305,7 +40368,10 @@
             },
             "required": [
               "name"
-            ]
+            ],
+            "example": {
+              "name": "Session/001"
+            }
           },
           "access_token": {
             "type": "string",
@@ -40664,7 +40730,10 @@
             },
             "required": [
               "name"
-            ]
+            ],
+            "example": {
+              "name": "Color"
+            }
           },
           "create_variant": {
             "type": "string",
@@ -40717,7 +40786,10 @@
             },
             "required": [
               "name"
-            ]
+            ],
+            "example": {
+              "name": "Red"
+            }
           },
           "attribute_id": {
             "oneOf": [
@@ -40800,7 +40872,10 @@
             },
             "required": [
               "name"
-            ]
+            ],
+            "example": {
+              "name": "Electronics"
+            }
           },
           "complete_name": {
             "type": "string",
@@ -41032,7 +41107,10 @@
             },
             "required": [
               "barcode"
-            ]
+            ],
+            "example": {
+              "barcode": "1234567890"
+            }
           },
           "accessory_product_ids": {
             "type": "array",
@@ -42264,7 +42342,10 @@
             },
             "required": [
               "name"
-            ]
+            ],
+            "example": {
+              "name": "Test Product"
+            }
           },
           "accessory_product_ids": {
             "type": "array",
@@ -43321,7 +43402,10 @@
             },
             "required": [
               "name"
-            ]
+            ],
+            "example": {
+              "name": "Website Redesign"
+            }
           },
           "access_instruction_message": {
             "type": "string",
@@ -43961,7 +44045,10 @@
             },
             "required": [
               "name"
-            ]
+            ],
+            "example": {
+              "name": "Design Homepage"
+            }
           },
           "access_token": {
             "type": "string",
@@ -44579,7 +44666,10 @@
             },
             "required": [
               "name"
-            ]
+            ],
+            "example": {
+              "name": "PO/001"
+            }
           },
           "access_token": {
             "type": "string",
@@ -45076,7 +45166,10 @@
             },
             "required": [
               "name"
-            ]
+            ],
+            "example": {
+              "name": "PO/001-1"
+            }
           },
           "analytic_distribution": {
             "type": "object",
@@ -45427,7 +45520,10 @@
             },
             "required": [
               "email"
-            ]
+            ],
+            "example": {
+              "email": "john@example.com"
+            }
           },
           "active": {
             "type": "boolean",
@@ -46543,7 +46639,10 @@
             },
             "required": [
               "acc_number"
-            ]
+            ],
+            "example": {
+              "acc_number": "1234567890"
+            }
           },
           "acc_holder_name": {
             "type": "string",
@@ -46814,7 +46913,10 @@
             },
             "required": [
               "name"
-            ]
+            ],
+            "example": {
+              "name": "VIP"
+            }
           },
           "active": {
             "type": "boolean",
@@ -46875,7 +46977,10 @@
             },
             "required": [
               "name"
-            ]
+            ],
+            "example": {
+              "name": "S00001"
+            }
           },
           "access_point_address": {
             "type": "object",
@@ -47776,7 +47881,10 @@
             },
             "required": [
               "name"
-            ]
+            ],
+            "example": {
+              "name": "S00001-1"
+            }
           },
           "analytic_distribution": {
             "type": "object",
@@ -48311,7 +48419,10 @@
             },
             "required": [
               "complete_name"
-            ]
+            ],
+            "example": {
+              "complete_name": "WH/Stock"
+            }
           },
           "active": {
             "type": "boolean",
@@ -48529,7 +48640,10 @@
             },
             "required": [
               "name"
-            ]
+            ],
+            "example": {
+              "name": "Move/001"
+            }
           },
           "additional": {
             "type": "boolean",
@@ -49331,7 +49445,10 @@
             },
             "required": [
               "name"
-            ]
+            ],
+            "example": {
+              "name": "Move/001-1"
+            }
           },
           "carrier_id": {
             "oneOf": [
@@ -49804,7 +49921,10 @@
             },
             "required": [
               "name"
-            ]
+            ],
+            "example": {
+              "name": "WH/OUT/001"
+            }
           },
           "activity_calendar_event_id": {
             "oneOf": [
@@ -50445,7 +50565,10 @@
             },
             "required": [
               "name"
-            ]
+            ],
+            "example": {
+              "name": "Delivery Orders"
+            }
           },
           "active": {
             "type": "boolean",
@@ -50786,7 +50909,10 @@
             },
             "required": [
               "id"
-            ]
+            ],
+            "example": {
+              "id": 1
+            }
           },
           "accounting_date": {
             "type": "string",
@@ -51107,7 +51233,10 @@
             },
             "required": [
               "name"
-            ]
+            ],
+            "example": {
+              "name": "Warehouse 1"
+            }
           },
           "active": {
             "type": "boolean",
@@ -51643,7 +51772,10 @@
             },
             "required": [
               "name"
-            ]
+            ],
+            "example": {
+              "name": "Unit"
+            }
           },
           "is_pos_groupable": {
             "type": "boolean",
@@ -51689,7 +51821,10 @@
             },
             "required": [
               "name"
-            ]
+            ],
+            "example": {
+              "name": "Units"
+            }
           },
           "active": {
             "type": "boolean",
