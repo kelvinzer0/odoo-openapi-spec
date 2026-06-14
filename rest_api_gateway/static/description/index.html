@@ -1,10 +1,10 @@
 <section class="oe_container">
     <div class="oe_row oe_spaced">
-        <h2 class="oe_slogan">REST API for Odoo</h2>
-        <h3 class="oe_slogan">Expose any Odoo model as REST API endpoints</h3>
+        <h2 class="oe_slogan">REST API Gateway for Odoo</h2>
+        <h3 class="oe_slogan">Turn your Odoo into a powerful REST API in minutes</h3>
         <div class="oe_span12">
             <p class="oe_mt32 text-justify">
-                Transform your Odoo instance into a powerful REST API. Access any business model — Partners, Products, Sales, Purchases, Inventory, Accounting, CRM, and more — through simple HTTP endpoints.
+                Stop wrestling with XML-RPC. REST API Gateway gives you clean, modern HTTP endpoints that any developer, tool, or automation platform can use instantly. Connect e-commerce, mobile apps, n8n workflows, and BI tools — all with a simple Bearer token.
             </p>
         </div>
     </div>
@@ -12,10 +12,10 @@
 
 <section class="oe_container oe_dark">
     <div class="oe_row oe_spaced">
-        <h2 class="oe_slogan">Bearer Token Authentication</h2>
+        <h2 class="oe_slogan">Secure Bearer Token Authentication</h2>
         <div class="oe_span12">
             <p class="oe_mt32 text-justify">
-                Generate secure API tokens directly from the Odoo backend. No password sharing, no complex setup. Just click <b>Generate Token</b> in the API Console and start making requests.
+                Generate secure API tokens directly from the Odoo backend. No password sharing, no complex setup. Just click <b>Generate Token</b> in the API Console and start making requests. Tokens can be revoked instantly for maximum security.
             </p>
         </div>
     </div>
@@ -23,10 +23,10 @@
 
 <section class="oe_container">
     <div class="oe_row oe_spaced">
-        <h2 class="oe_slogan">Upsert Support</h2>
+        <h2 class="oe_slogan">Smart Upsert — Create or Update in One Call</h2>
         <div class="oe_span12">
             <p class="oe_mt32 text-justify">
-                Create or update records in a single API call using the <b>upsert</b> feature. Define a unique key (like email for partners or barcode for products) and the API handles the rest — no need to check if a record exists first.
+                Define a unique key (like email for partners or barcode for products) and the API handles the rest. If the record exists, it's updated. If not, it's created. No need to check first — one API call does it all.
             </p>
         </div>
     </div>
@@ -34,10 +34,10 @@
 
 <section class="oe_container oe_dark">
     <div class="oe_row oe_spaced">
-        <h2 class="oe_slogan">Smart Relational Fields</h2>
+        <h2 class="oe_slogan">Name-Based Relations — No More ID Guessing</h2>
         <div class="oe_span12">
             <p class="oe_mt32 text-justify">
-                No more guessing IDs. Send field names directly — <b>"categ_id": "Electronics"</b> — and the API auto-resolves them. If the related record doesn't exist, it's created automatically.
+                Send field names directly — <b>"categ_id": "Electronics"</b> — and the API auto-resolves them. If the related record doesn't exist, it's created automatically. No more looking up IDs in the database.
             </p>
         </div>
     </div>
@@ -45,10 +45,10 @@
 
 <section class="oe_container">
     <div class="oe_row oe_spaced">
-        <h2 class="oe_slogan">Interactive API Console</h2>
+        <h2 class="oe_slogan">Interactive API Console with Scalar UI</h2>
         <div class="oe_span12">
             <p class="oe_mt32 text-justify">
-                Built-in Scalar UI documentation right inside Odoo. Browse all endpoints, see request/response examples, and test API calls directly from your browser — no third-party tools needed.
+                Built-in Scalar documentation right inside Odoo. Browse all endpoints, see request/response examples, and test API calls directly from your browser. No third-party tools needed — everything is ready to go.
             </p>
         </div>
     </div>
@@ -56,10 +56,32 @@
 
 <section class="oe_container oe_dark">
     <div class="oe_row oe_spaced">
-        <h2 class="oe_slogan">45 Business Models</h2>
+        <h2 class="oe_slogan">45+ Business Models Ready</h2>
         <div class="oe_span12">
             <p class="oe_mt32 text-justify">
-                Includes REST endpoints for: Account, Journal, Move, Payment, Tax, CRM (Lead, Stage, Tag), HR (Department, Employee, Job), MRP (BOM, Production, Workorder), POS (Config, Order, Session), Product (Attribute, Category, Product, Template), Project, Purchase, Partner, Sale, Stock (Location, Move, Picking, Quant, Warehouse), and UoM.
+                Includes REST endpoints for: Account, CRM, HR, Inventory, Manufacturing, POS, Product, Purchase, Sales, Stock, Projects, and more. Every major Odoo module is covered with full CRUD operations.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">Perfect for Integrations</h2>
+        <div class="oe_span12">
+            <p class="oe_mt32 text-justify">
+                Connect your favorite tools: <b>n8n</b>, <b>Make</b>, <b>Zapier</b>, <b>Shopify</b>, <b>WooCommerce</b>, <b>Power BI</b>, <b>Tableau</b>, or custom mobile apps. The REST API Gateway makes Odoo play nicely with everything.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">n8n Automation Ready</h2>
+        <div class="oe_span12">
+            <p class="oe_mt32 text-justify">
+                Works perfectly with <b>n8n</b> for workflow automation. Use the <a href="https://www.npmjs.com/package/@n8n-dev/n8n-nodes-odoo-v17">Odoo n8n Community Node</a> to automate tasks like syncing orders, creating invoices, sending reports, and more — all without writing code.
             </p>
         </div>
     </div>
@@ -78,10 +100,21 @@
 
 <section class="oe_container oe_dark">
     <div class="oe_row oe_spaced">
-        <h2 class="oe_slogan">n8n Automation Ready</h2>
+        <h2 class="oe_slogan">OpenAPI 3.1.0 Specification</h2>
         <div class="oe_span12">
             <p class="oe_mt32 text-justify">
-                Connect to <b>n8n</b> for powerful workflow automation. Use the <a href="https://www.npmjs.com/package/@n8n-dev/n8n-nodes-odoo-v17">Odoo n8n Community Node</a> to automate tasks like syncing orders, creating invoices, sending reports, and more — all without writing code.
+                Industry-standard OpenAPI spec served at <b>/api/spec</b>. Generate client SDKs, import into Postman, or use with any OpenAPI-compatible tool. The spec includes examples, field metadata, and authentication details.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">What You Get</h2>
+        <div class="oe_span12">
+            <p class="oe_mt32 text-justify">
+                REST API controller with full CRUD operations, API Console with interactive Scalar documentation, OpenAPI 3.1.0 specification, Bearer token management UI, Field metadata explorer, Smart relational field resolver, and Comprehensive error handling. No hidden fees, no activation keys. Your data stays yours.
             </p>
         </div>
     </div>
