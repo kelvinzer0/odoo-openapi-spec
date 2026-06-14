@@ -132,6 +132,93 @@ def with_auth(func):
     return wrapper
 
 
+def _resolve_relational(model_name, data):
+    Model = request.env[model_name].sudo()
+    fields_get = Model.fields_get()
+    resolved = {}
+
+    for fname, value in data.items():
+        if fname not in fields_get:
+            resolved[fname] = value
+            continue
+
+        finfo = fields_get[fname]
+        rel = finfo.get('relation')
+        ftype = finfo.get('type')
+
+        if ftype == 'many2one' and rel:
+            if isinstance(value, int):
+                resolved[fname] = value
+            elif isinstance(value, str) and value.strip():
+                rel_model = request.env[rel].sudo()
+                search_fields = ['name']
+                if 'complete_name' in rel_model._fields:
+                    search_fields.append('complete_name')
+                if 'display_name' in rel_model._fields:
+                    search_fields.append('display_name')
+                domain = ['|'] * (len(search_fields) - 1)
+                for sf in search_fields:
+                    domain.extend([(sf, '=', value)])
+                rec = rel_model.search(domain, limit=1)
+                if rec:
+                    resolved[fname] = rec.id
+                else:
+                    resolved[fname] = value
+            elif isinstance(value, dict):
+                rel_model = request.env[rel].sudo()
+                domain = [(k, '=', v) for k, v in value.items()]
+                rec = rel_model.search(domain, limit=1)
+                if rec:
+                    resolved[fname] = rec.id
+                else:
+                    new_rec = rel_model.create(value)
+                    resolved[fname] = new_rec.id
+            else:
+                resolved[fname] = value
+
+        elif ftype in ('many2many', 'one2many') and rel:
+            if isinstance(value, list) and value:
+                if isinstance(value[0], dict):
+                    rel_model = request.env[rel].sudo()
+                    ids = []
+                    for item in value:
+                        if isinstance(item, dict):
+                            if 'id' in item:
+                                ids.append(item['id'])
+                            else:
+                                domain = [(k, '=', v) for k, v in item.items()]
+                                rec = rel_model.search(domain, limit=1)
+                                if rec:
+                                    ids.append(rec.id)
+                                else:
+                                    new_rec = rel_model.create(item)
+                                    ids.append(new_rec.id)
+                    resolved[fname] = [(6, 0, ids)] if ftype == 'many2many' else ids
+                elif isinstance(value[0], int):
+                    resolved[fname] = [(6, 0, value)] if ftype == 'many2many' else value
+                else:
+                    resolved[fname] = value
+            elif isinstance(value, str) and value.strip():
+                rel_model = request.env[rel].sudo()
+                search_fields = ['name']
+                if 'complete_name' in rel_model._fields:
+                    search_fields.append('complete_name')
+                domain = ['|'] * (len(search_fields) - 1)
+                for sf in search_fields:
+                    domain.extend([(sf, '=', value)])
+                rec = rel_model.search(domain, limit=1)
+                if rec:
+                    resolved[fname] = [(6, 0, [rec.id])] if ftype == 'many2many' else [rec.id]
+                else:
+                    resolved[fname] = value
+            else:
+                resolved[fname] = value
+        else:
+            resolved[fname] = value
+
+    return resolved
+
+
 class RestApiController(http.Controller):
 
     # ═══════════════════════════════════════════
@@ -176,6 +263,33 @@ class RestApiController(http.Controller):
         key = _get_token_key(user_id)
         ICP.set_param(key, '')
         return {'revoked': True}
+
+    # ═══════════════════════════════════════════
+    # Fields Metadata
+    # ═══════════════════════════════════════════
+    @http.route('/api/<path:model>/fields', type='http', auth='none', methods=['GET'], csrf=False)
+    @with_auth
+    def fields(self, model, **kwargs):
+        try:
+            Model = request.env[model].sudo()
+            fields_get = Model.fields_get()
+            result = {}
+            for fname, finfo in fields_get.items():
+                rel = finfo.get('relation')
+                entry = {
+                    'type': finfo.get('type'),
+                    'label': finfo.get('string', ''),
+                    'required': finfo.get('required', False),
+                }
+                if rel:
+                    entry['relation'] = rel
+                    entry['help'] = f'Send {{\"{fname}\": \"Name\"}} to auto-resolve ID'
+                if finfo.get('selection'):
+                    entry['selection'] = finfo['selection']
+                result[fname] = entry
+            return json_response(result)
+        except Exception as e:
+            return error_response(str(e), 500)
 
     # ═══════════════════════════════════════════
     # OpenAPI Spec
@@ -273,6 +387,7 @@ class RestApiController(http.Controller):
         key_fields = MODEL_KEYS.get(model, ['name'])
         key_data = body['_key']
         data = {k: v for k, v in body.items() if k != '_key'}
+        data = _resolve_relational(model, data)
 
         domain = []
         for kf in key_fields:
@@ -313,6 +428,8 @@ class RestApiController(http.Controller):
             body = json.loads(request.httprequest.data)
         except json.JSONDecodeError:
             return error_response('Invalid JSON body')
+
+        body = _resolve_relational(model, body)
 
         try:
             Model = request.env[model].sudo()
