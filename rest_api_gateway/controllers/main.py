@@ -289,7 +289,7 @@ class RestApiController(http.Controller):
         key = _get_token_key(user_id)
         token = ICP.get_param(key)
         if token:
-            return {'has_token': True, 'token_preview': token[:8] + '...' + token[-4:]}
+            return {'has_token': True, 'token': f'Bearer {token}', 'token_preview': token[:8] + '...' + token[-4:]}
         return {'has_token': False}
 
     @http.route('/api/credentials/generate', type='json', auth='user', methods=['POST'], csrf=False)
