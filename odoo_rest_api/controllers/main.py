@@ -471,7 +471,9 @@ class RestApiController(http.Controller):
 
         try:
             Model = request.env[model].sudo()
-            existing = Model.search(domain, limit=1)
+            # Search with active_test=False to find archived records too
+            # (prevents duplicate creation when product was previously archived)
+            existing = Model.with_context(active_test=False).search(domain, limit=1)
 
             if existing:
                 existing.write(data)
